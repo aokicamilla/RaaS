@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_1593670_raas.moderators</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>moderators</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-03 12:15:10</sys_created_on>
+        <sys_id>8aed81bec3f21210c07d190ed40131bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1593670_raas.moderators</sys_name>
+        <sys_package display_value="RaaS" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>sys_user_role_8aed81bec3f21210c07d190ed40131bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-03 12:15:10</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RaaS">75ed81bec3f21210c07d190ed401319a</application>
+        <file_path/>
+        <instance_id>408484101bad86d87d9d2f8dee4bcbb8</instance_id>
+        <instance_name>dev259545</instance_name>
+        <name>sys_user_role_8aed81bec3f21210c07d190ed40131bc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>x_1593670_raas.moderators</name><scoped_admin>false</scoped_admin><suffix>moderators</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-03 12:15:10</sys_created_on><sys_id>8aed81bec3f21210c07d190ed40131bc</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1593670_raas.moderators</sys_name><sys_package display_value="RaaS" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package><sys_policy/><sys_scope display_value="RaaS">75ed81bec3f21210c07d190ed401319a</sys_scope><sys_update_name>sys_user_role_8aed81bec3f21210c07d190ed40131bc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-03 12:15:10</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>742177182</payload_hash>
+        <record_name>x_1593670_raas.moderators</record_name>
+        <reverted_from/>
+        <source>ceed81bec3f21210c07d190ed40131b7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-03 12:15:10</sys_created_on>
+        <sys_id>02ed81bec3f21210c07d190ed40131c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1942c1747c60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-03 12:15:10</sys_updated_on>
+        <type>Role</type>
+        <update_guid>06ed81beeaf21210837e65c1f84af5c0</update_guid>
+        <update_guid_history>06ed81beeaf21210837e65c1f84af5c0:742177182</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1593670_raas.moderators">5dfe9db2c3761210c07d190ed40131f9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-03 13:29:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>0d82504ccc974638822565d265c22d64</sys_id>
+        <sys_metadata>8aed81bec3f21210c07d190ed40131bc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1593670_raas.moderators</sys_name>
+        <sys_package display_value="RaaS" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RaaS">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_scope_delete display_value="">3c9b869725a94870a23fdfd2e4524fb1</sys_scope_delete>
+        <sys_update_name>sys_user_role_8aed81bec3f21210c07d190ed40131bc</sys_update_name>
+        <sys_update_version display_value="sys_user_role_8aed81bec3f21210c07d190ed40131bc">02ed81bec3f21210c07d190ed40131c1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-03 13:29:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
