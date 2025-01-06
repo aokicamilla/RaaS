@@ -15,7 +15,7 @@
         <license_model>none</license_model>
         <logo>4d3fc1fec3f21210c07d190ed4013169</logo>
         <menu/>
-        <name>RaaS</name>
+        <name>RaaS - Camilla Aoki</name>
         <package_json/>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
@@ -32,9 +32,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-03 12:15:10</sys_created_on>
         <sys_id>75ed81bec3f21210c07d190ed401319a</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-03 12:20:50</sys_updated_on>
+        <sys_updated_on>2025-01-06 12:50:50</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>

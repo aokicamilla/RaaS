@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="RaaS - Review as a Service">55953abec3fa1210c07d190ed40131a4</application>
+        <application display_value="RaaS - Camilla Aoki Review as a Service ">55953abec3fa1210c07d190ed40131a4</application>
         <assessment/>
         <device_type/>
         <filter table="x_1593670_raas_review">state=8^EQ<item display_value="Awaiting Administrator's Approval" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="8"/>
@@ -20,22 +20,22 @@
         <query/>
         <report/>
         <require_confirmation>true</require_confirmation>
-        <roles>x_1593670_raas.moderator</roles>
+        <roles>x_1593670_raas.administrator</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-03 20:06:20</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ee8932b2c33e1210c07d190ed4013109</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Awaiting Administrator's Approval</sys_name>
         <sys_overrides/>
-        <sys_package display_value="RaaS" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
         <sys_policy/>
-        <sys_scope display_value="RaaS">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
         <sys_update_name>sys_app_module_ee8932b2c33e1210c07d190ed4013109</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-03 21:20:26</sys_updated_on>
+        <sys_updated_on>2025-01-06 12:06:05</sys_updated_on>
         <timeline_page/>
         <title>Awaiting Administrator's Approval</title>
         <uncancelable>false</uncancelable>
