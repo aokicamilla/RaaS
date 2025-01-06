@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <inactive>false</inactive>
+        <order>200</order>
+        <published_ref/>
+        <question display_value="Rate your media">3fe006bfc33e1210c07d190ed40131cd</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 18:39:21</sys_created_on>
+        <sys_id>e5920633c37e1210c07d190ed40131a8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>question_choice_e5920633c37e1210c07d190ed40131a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 18:46:50</sys_updated_on>
+        <text>2</text>
+        <value>2</value>
+    </question_choice>
+    <fx_price action="DELETE" query="id=e5920633c37e1210c07d190ed40131a8"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</application>
+        <file_path/>
+        <instance_id>408484101bad86d87d9d2f8dee4bcbb8</instance_id>
+        <instance_name>dev259545</instance_name>
+        <name>question_choice_e5920633c37e1210c07d190ed40131a8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice"><question_choice action="INSERT_OR_UPDATE"><inactive>false</inactive><order>200</order><published_ref/><question display_value="Rate your media">3fe006bfc33e1210c07d190ed40131cd</question><sys_class_name>question_choice</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-06 18:39:21</sys_created_on><sys_id>e5920633c37e1210c07d190ed40131a8</sys_id><sys_mod_count>3</sys_mod_count><sys_name>2</sys_name><sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package><sys_policy/><sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope><sys_update_name>question_choice_e5920633c37e1210c07d190ed40131a8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 18:46:50</sys_updated_on><text>2</text><value>2</value></question_choice><fx_price action="delete_multiple" query="id=e5920633c37e1210c07d190ed40131a8"/></record_update>]]></payload>
+        <payload_hash>-1642848847</payload_hash>
+        <record_name>2</record_name>
+        <reverted_from/>
+        <source>d29e03bac37e1210c07d190ed40131ce</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 18:46:50</sys_created_on>
+        <sys_id>50544af3c37e1210c07d190ed40131b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943cf0ee920000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 18:46:50</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>d4544af3d07e121042876c83f3ed63b5</update_guid>
+        <update_guid_history>d4544af3d07e121042876c83f3ed63b5:-1642848847,57440af3357e121076d802fab49824f9:286667532,4ec20a73b07e1210a2565fa28f25815e:1211437966,83920273047e1210c53a59c71d2f5952:1218818287</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="2">714b52ffc3be1210c07d190ed401316f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 20:27:09</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>0b38775dec8843d8930bcd445e3b1840</sys_id>
+        <sys_metadata>e5920633c37e1210c07d190ed40131a8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_parent display_value="Rate your media">3fe006bfc33e1210c07d190ed40131cd</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_scope_delete display_value="">3c9b869725a94870a23fdfd2e4524fb1</sys_scope_delete>
+        <sys_update_name>question_choice_e5920633c37e1210c07d190ed40131a8</sys_update_name>
+        <sys_update_version display_value="question_choice_e5920633c37e1210c07d190ed40131a8">50544af3c37e1210c07d190ed40131b6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 20:27:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
