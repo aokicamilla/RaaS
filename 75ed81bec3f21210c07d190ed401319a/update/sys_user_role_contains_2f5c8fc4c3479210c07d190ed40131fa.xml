@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="approver_user" name="approver_user">debab85bff02110053ccffffffffffb6</contains>
+        <role display_value="x_1593670_raas.moderator" name="x_1593670_raas.moderator">38be19b2c3761210c07d190ed4013158</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-07 18:40:06</sys_created_on>
+        <sys_id>2f5c8fc4c3479210c07d190ed40131fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>approver_user.x_1593670_raas.moderator</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>sys_user_role_contains_2f5c8fc4c3479210c07d190ed40131fa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-07 18:40:06</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>
