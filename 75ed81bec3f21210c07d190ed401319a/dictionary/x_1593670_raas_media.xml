@@ -9,7 +9,7 @@
                 <element inactive_on_update="false" label="Episode" sequence="0" value="e"/>
             </choice>
         </element>
-        <element label="Poster" max_length="40" name="poster" type="url"/>
+        <element label="Poster" max_length="240" name="poster" type="url"/>
         <element label="Country" max_length="250" name="country" type="string"/>
         <element label="Production" max_length="250" name="production" type="string"/>
         <element default="0" label="Average rating" max_length="255" name="average_rating" type="float"/>
