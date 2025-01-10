@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="d3313e3ac3fa1210c07d190ed4013144" extends="task" label="Suggestion" max_length="40" name="x_1593670_raas_suggestion" type="collection">
-        <element label="Release Year" max_length="40" name="release_year" type="string"/>
+        <element label="Release Year" max_length="4" name="release_year" type="string"/>
         <element label="media" max_length="32" name="media" reference="x_1593670_raas_media" type="reference"/>
         <element label="Title" max_length="250" name="title" type="string"/>
         <element label="Reproval Reason" max_length="4000" name="reprove_reason" type="string"/>

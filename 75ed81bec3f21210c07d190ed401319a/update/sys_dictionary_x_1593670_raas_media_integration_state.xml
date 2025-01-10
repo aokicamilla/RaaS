@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="release_year" table="x_1593670_raas_suggestion">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="integration_state" table="x_1593670_raas_media">
         <active>true</active>
         <array>false</array>
         <attributes/>
         <audit>false</audit>
-        <calculation/>
-        <choice>0</choice>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Release Year</column_label>
+        <column_label>Integration State</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>1</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -21,16 +26,16 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>release_year</element>
+        <element>integration_state</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="String">string</internal_type>
+        <internal_type display_value="Choice">choice</internal_type>
         <mandatory>false</mandatory>
-        <max_length>4</max_length>
-        <name>x_1593670_raas_suggestion</name>
+        <max_length>40</max_length>
+        <name>x_1593670_raas_media</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -46,14 +51,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-03 19:31:12</sys_created_on>
-        <sys_name>Release Year</sys_name>
+        <sys_created_on>2025-01-09 17:48:11</sys_created_on>
+        <sys_name>Integration State</sys_name>
         <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
         <sys_policy/>
         <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
-        <sys_update_name>sys_dictionary_x_1593670_raas_suggestion_release_year</sys_update_name>
+        <sys_update_name>sys_dictionary_x_1593670_raas_media_integration_state</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-10 13:04:26</sys_updated_on>
+        <sys_updated_on>2025-01-09 17:52:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
