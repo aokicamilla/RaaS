@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=7508000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>this flow create an approved media suuuggestion in the media table</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>creating_a_suggested_film</internal_name>
+        <label_cache>[{"name":"Created_1.current.release_year","label":"Trigger - Record Created➛Suggestion Record➛Release Year","reference":"","reference_display":"Release Year","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"release_year","usedInstances":{"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"dcd97419-ac1b-4587-8e03-584b949d7897.__action_status__.code","label":"1 - Look Up Records➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{},"attributes":{}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.title","label":"5 - Update Record➛Suggestion Record➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"title","usedInstances":{"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Suggestion Record","reference":"x_1593670_raas_suggestion","reference_display":"Suggestion","type":"reference","base_type":"reference","usedInstances":{"d336421e-6c38-433c-876e-a1cbc43dfebb":["record"],"1cbf5cb9-2ea7-4a9c-9069-27112a9711af":["record"],"ce2dcca6-4fbc-400a-a095-578a0e439d58":["record"],"de64e908-9d2f-4ac4-97eb-6c4c9630f4ed":["record"],"9012435e-7f0d-4ff2-b01f-8ef0631a94db":["conditions"],"c9c70bf4-78a8-4e3e-a8f3-f11f425e431b":["record"],"2c3acba9-996e-48ca-8077-0ab2bf2359ff":["record"],"dc5d64d0-1504-4e16-b466-836481c502e3":["conditions"]},"attributes":{}},{"name":"{{static.899735a6c37a1210380d5f73e4013163}}","label":"RaaS Administrators","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"1cbf5cb9-2ea7-4a9c-9069-27112a9711af":["approval_conditions"]}},{"name":"1cbf5cb9-2ea7-4a9c-9069-27112a9711af.approval_state","label":"6 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"b7cf0d86-f4dc-462c-b648-c18637f95b96":["condition"],"99b04fa9-a601-45eb-9e31-8d5a2639768b":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.title","label":"Trigger - Record Created➛Suggestion Record➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"title","usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["title"],"8b462a41-47a3-4cdf-a7a5-1f70a295557a":["condition"],"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.type","label":"5 - Update Record➛Suggestion Record➛Type","reference":"","reference_display":"Type","type":"choice","base_type":"choice","parent_table_name":"x_1593670_raas_suggestion","column_name":"type","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Movie","used":false,"image":"","reference":false,"rawLabel":"Movie","selected":false,"missing":false,"value":"movie","parameters":{"name":"x_1593670_raas_suggestion","dependent_values":[""]}},{"label":"Series","used":false,"image":"","reference":false,"rawLabel":"Series","selected":false,"missing":false,"value":"series","parameters":{"name":"x_1593670_raas_suggestion","dependent_values":[""]}}],"usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["type"]}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.release_year","label":"5 - Update Record➛Suggestion Record➛Release Year","reference":"","reference_display":"Release Year","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"release_year","usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["release_year"]}},{"name":"dcd97419-ac1b-4587-8e03-584b949d7897.Records","label":"1 - Look Up Records➛Media Records","reference":"x_1593670_raas_media","reference_display":"Media","type":"records","base_type":"records","usedInstances":{"afd1a81d-aa38-46b6-b1e4-755875bd3b57":["items"],"d87dc38a-c86d-4c1f-a039-4ab59122fe91":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record","label":"5 - Update Record➛Suggestion Record","reference":"x_1593670_raas_suggestion","reference_display":"Suggestion","type":"reference","base_type":"reference","usedInstances":{"ce2dcca6-4fbc-400a-a095-578a0e439d58":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Suggestion Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1593670_raas_suggestion","column_name":"sys_id","usedInstances":{"82cc6521-036c-4645-bfb6-f2737fa1e446":["conditions"]}}]</label_cache>
+        <master_snapshot>6ff7f2c6c34fda10c07d190ed4013125</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Creating a suggested film </name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>b7f7f2c6c34fda10c07d190ed401317c</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:28:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>38de920ac3cbda10c07d190ed40131f7</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>Creating a suggested film </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>sys_hub_flow_38de920ac3cbda10c07d190ed40131f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:09</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1593670_raas_suggestion">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b7f7f2c6c34fda10c07d190ed401317c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:18:57</sys_updated_on>
+        <table>x_1593670_raas_suggestion</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>38de920ac3cbda10c07d190ed40131f7</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:34:09</sys_created_on>
+        <sys_id>ee7bfa0ec34fda10c07d190ed4013149</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:09</sys_updated_on>
+        <trigger display_value="">b7f7f2c6c34fda10c07d190ed401317c</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=38de920ac3cbda10c07d190ed40131f7^sys_idNOT INee7bfa0ec34fda10c07d190ed4013149"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=38de920ac3cbda10c07d190ed40131f7^sys_idNOT IN38de524ac3cbda10c07d190ed401314d"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>38de920ac3cbda10c07d190ed40131f7</id>
+        <name>Creating a suggested film </name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:28:58</sys_created_on>
+        <sys_id>38de524ac3cbda10c07d190ed401314d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 20:28:58</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=38de524ac3cbda10c07d190ed401314d"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=38de920ac3cbda10c07d190ed40131f7^sys_idNOT IN110f564ac3cbda10c07d190ed401311a,510f524ac3cbda10c07d190ed4013158"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</model>
+        <model_id>38de920ac3cbda10c07d190ed40131f7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_38de920ac3cbda10c07d190ed40131f7</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:29:50</sys_created_on>
+        <sys_id>110f564ac3cbda10c07d190ed401311a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 20:29:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=110f564ac3cbda10c07d190ed401311a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</model>
+        <model_id>38de920ac3cbda10c07d190ed40131f7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_38de920ac3cbda10c07d190ed40131f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:29:50</sys_created_on>
+        <sys_id>510f524ac3cbda10c07d190ed4013158</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 20:29:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=510f524ac3cbda10c07d190ed4013158"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=38de920ac3cbda10c07d190ed40131f7^sys_idNOT INed0f564ac3cbda10c07d190ed4013148"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:29:50</sys_created_on>
+        <sys_id>ed0f564ac3cbda10c07d190ed4013148</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 20:38:18</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuvgS523rZNEA2w1qe9uHIBUoaWgLpSlXpJS4i/x7h7rYsi6+Z5O8BDBJcc4cnjlD5uG7zogLTL/Wp8RloHf0gEuIOGHT1RJwWKphh5OFmlsQ7hMZRiv9WkYxdPQw8iHSr82OnhAWw2Ql7nz8CJemX+Sf6/k0/n52zN7Q7g8MJyJEOCKezUDIIOS4xg/EkpHVn/nSSXnOmwfMj4Dr1w+PHX1JItxeqtDfK1OBiu9RjwwtMDzbtC3LMKyrrun2bde0fJuAYeCG1bQreGVD9ptk4VkC9wFDUcIENBATAfHvOVutV8yR14yZBXkWwX+4+5Wh1lFA7B5kc+ufTk5GNuzNw8CD+2VKRjqS4cwmQxYv+NcMv6IRKImZLGjEkVjgfrBUkBWIHBGdzMOncRHwc8DT7PJJFnqErX8RKaPAjSUIRTgNGFLvZNyIMI5S9OPb0f34xvnr03T02+3YGd9OpuO70fT2Rn9J83L+jdWOGcIci5Ol87I++88BMHWAPF64iKajCy8KlvKTJ4MEcjgvnY1oRyH3g1wiFeF6xZTYFm6eUnGYhtGqXa+0eaHfv2//qCs1GzxOov0+IT6QFom6tCTRcpIN0GRDvuXsdok1HzlErV3DeCO9ZhV1slwXoQ/sZrOdjpPoLJET8GUsFVtPhEvhyNAhvu+UeFRLEdM+/Wa5vewVaxRz/MBZn0ddsilta/6+BALhPmDBFdykW+I8/ZJvOY65FuLB4R/NiyOkRmqFhdG7BZnljNIJMPBkSQT0myj/+j0QIuCzEup10JSDWsx1OBSTVqSUxRZnBn88sV7r/CYV3ip1e3TRmialLlDLGKiSNQ3bpaYxMHqE+rZheFapaOtgWlHKyum/SvEeV7oi1R07QGVVinPwRln4Bykm2ZZbQYJSQ+4Qo8tAMy8EzVLQKk5nH2V1a1lmwzfb6tyV2oU7OvETgl/4hzregWZHWfiELnuC0bnE+2cWhTH3q86j9tQCrm1WaD/l/P18QdOjYQS7AWyveCO72zBcaJTw1QWMzqamO4QuGOhvNlqb2xsOXY9YlA76A7DMitFtYDRi+xAGt0dYSZMy28yuUSNJk7SOsLkzANYs72iA55tdLsxGq8vmPoapPc2BOwg1cpiyrZq3zVjgQzF3cmHXoiSbUj63uOnV0OuZg4E3wGcHFjftgkvMrtUjw0HfvupVirsGZRdM2UDCD3mMiJVIgbQU/rds6n09pF9ToQKkVE3m+N7L8XaafkOyIKX+p45FS/0jjLSvIf/lbrNOmwC2tfRFeqkmfAgKdbDa68JwQzmv3QIw9K84vhVa3R5bWHnLN1FFD8l2Wme/iaB71RtSu9lN6LDJTTZg2mG++0vDgcWQtJZV0+3hUG0njSXS2u5PUGtFJuV7wI6LyqVIMS9OivV6pNhnX46KWmx9CJ4C9gN1q/QKcU7LUjHBCWnZp29CDSc0DKIFVMv/64fvenelyTkgpQxvwRhQU9HPNehyw6hDWSv4xwLJ7tW1xoXDWn5XetOeVDn1yz5hwR+QXs9uueUOq0/YJkB78L77DnV0ASRN9bSzTR23b3XPxkZVUue2Ig5sQRfNurkPnZd1Yyfal/X5PWbXA7wBxTvtHo//A4WtCYizHgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=38de920ac3cbda10c07d190ed40131f7^sys_idNOT IN21f06ecac3cbda10c07d190ed40131dc,2df06ecac3cbda10c07d190ed40131d8,423afa8ac34fda10c07d190ed40131f8,61f06ecac3cbda10c07d190ed40131d4,6df06ecac3cbda10c07d190ed40131d5,9917fe46c34fda10c07d190ed40131c7,c739f64ac34fda10c07d190ed4013143,e9f06ecac3cbda10c07d190ed40131dd"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:38:18</sys_created_on>
+        <sys_id>21f06ecac3cbda10c07d190ed40131dc</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:36:29</sys_updated_on>
+        <ui_id>fb17a146-aa14-4f01-86cb-9c6f28ffe9c4</ui_id>
+        <values>H4sIAAAAAAAA/9VVy27iMBT9lcrrECWEpsBuRMVq2krTEZtOG93YN2DJeYztUBiUf5/rPCjqFM1Ds4Gd78vnHF9Ong5MCjZncYjB9SyMeRRG0TgIxtNJmMZRGo5FBIgT5rECcqRKC6nCpD14bAuqdsFdEl7PovgmSDSASXIUEigtpKkU7Fd91V0f5huphMaCzZ+ePVaBpmEWNZsf3qX+FJqCFBWVfnXYzkC1++rD2OfT3qv7LlFq4fAEHsOdxUIgAclAGfRYDoUAW+o9m1tdU0AjiIdC7Y8VG1lYGshc7c7IH3TtNHB1GRIzjl3ueEx6lbpwdgsWHmkyt7XuS/mmlBxNp4nADGplF6exruChsrIsupaWZt9dqjov7jtJ2HHA8CgUqQ2BwMrxdMh7Gtnjpnz9MqBcyqKVpE+qkoM6nsBaLdPaOjwHhgpzGpTkUFWyWCeVLreybSYsub9WdPAzVb7SpUauCx+4A+6TrOAvKX7bhlegpWNxR2OoufGY2ZuFAmPeuJCIyffaIemY9RySTgbXwrWs7Ce6YIs93MYbdl5gMDu7WGH6tkjtmpuTfbfSKvxWB0EkDocFbYBFkYQ+rzWJZf023TQvbr+GKhFF8WQc4ojum44mUcRH05sYRxDylE8ikWGa+ho5rZ7v+qhdk5JAb7NH0P8y5rS/aX79P14oi7+0j9+/8mAfS4lKmA+effAOzEk+i0m3Bu/8o09erfpk7yHh//KQMA7a3wU5SUfu4o3k5JtxxlKefwIxppL3SAcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:38:18</sys_created_on>
+        <sys_id>2df06ecac3cbda10c07d190ed40131d8</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:36:29</sys_updated_on>
+        <ui_id>dcd97419-ac1b-4587-8e03-584b949d7897</ui_id>
+        <values>H4sIAAAAAAAA/+VX226jMBD9lYhnFEFJ0svbKlWllXqR2qov3V1rwCax1gHWNknTiH/fARuCEtJNpERqtY+ei31m5hxjXlcOp86VcxEPPA/84cW55wWB541GQQR+GAajKPTCQei4TgIzhpEaQsFwOQeRl+s34g8vg9G5RySAIjNGOaCbcpUJWL7YqDtrjqZcUMkS5+r1p+tkIHFTzaRztdpw7YtKQMgEhj5bWBso9TJrlqTyGdttO613bxyppCUUz3XYm2YJZYghBqGY68wgoaBTuWwskgF9SMTaMOWJxh2dMvhN8Xc898Ir42KGVUXM+JolsR0y5vgaNDxpmUc6lzY0mqY8Ysr0g7IYcqHHbZsJeMg0TxOTYso22anIZ8m9aYfTbFAPBC25QhAsKwstkdsy4qdpunisUd7wpOqJdYo0AtGsQGvJw1yXeFYOE2yGG5EZZBlPJiST6ZxXyYhl1p8IXPRjkS7wUMUnSR+iEngf+wr9G7RfV+YXkLys4g63wWQExAUyhJgRqjSXVSvnJBK5qhwSEmX2cgrXUUs1FqDUunJsOfmTl7hNH2zFxDStTIkkz/Q33GLObHGFu5cwht6aclGaUF6iUC11aK4F+5FjLl2txsgZzSjx+1Eusb26X7mL4pfE5gGOY8lA7o5uRxXFtshOe9gxpVv1rZbuuN24rmZaEW/Zbrs2sCL2jyZirOMryRgP/3wqPlyXpgX/EGd0/iHJhms+qVRqYnrZUue2hA7m+R4Qap4/lMzshctdqCzNY84E7fpW3ZSOjW/V2f/5rfqUJEdAlJjp8UTwpLqSEeip2O99fMVebvCsotea+5UNVLStAejptPd+sBL2gFMr4QnP7j0bPB0Q6/u+oszmXV8brQCCowkgODuOAFZNmU0jO3pevzXLadbx72U8bMYjBVsJftElsIPO9A8986zYFnBwkILbZDOe6x2cO/KjdIci3VNeAVNMtecRo1+y4HTC9Pr0OoqmegHid5ffMo7Ug6rKO8EDd/ChbEf+WqKoFCKZwuG1X7g+Po+27xDfNebDrpA9sNTtuIO33mMDphOhvUZQ6WxSzaZ9j3xvrJbkgyM+GD/tl7QeVqcG65l9if/C4wnh518UZNAXBBEAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:28:39</sys_created_on>
+        <sys_id>423afa8ac34fda10c07d190ed40131f8</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:36:29</sys_updated_on>
+        <ui_id>dc5d64d0-1504-4e16-b466-836481c502e3</ui_id>
+        <values>H4sIAAAAAAAA/+VYTW/bOBD9K4LOjlfyt3MrEhgo0G2AJttLt0tQJBVzlyZVkkqaGP7vHYqUbdiKbaEOkGBv5nBIvpl5b0j52zLmNL6M6TSZ5tPpcDJOkn4/SUajPsFplvVHJEsyPIg7scQLBp4WZ4LB8AGL0o3Nk8FFoRWMkf/BNExTbgqBn74Grw/BBWbInAuqmYwvv33vxAXWsK+FNZfLnalTgQmcMQGudwHZDlD7VKyHqJrztk/by6LPfkJp6qAknZj9tExSBhhyLAzrxAssKbZKP60tmmF6I8XGMOfSwo6xc/5p+DOcO0mcX84gKsL83HqIQpK8Ob/GFt9aXRJb6uBK5ooTZnw+KMtxKezVts073BSWK+mX+LD9aiXKhfzs0xGvN6hrApbSAAhWuEAd8hBGfjtXj19qlDMuq5yESaEIlLEeYWs1z0rr8CxjJtgCNkILIAKX98jVnFeLAcuiey9g0M2FeoRDDb+XXUwc8C7kFXdnYL+uzF+x5i6KP2Gbikw5F8AQ5EtoVKmrVD4gIkpTTWgsjd8rXnUcJa8ENmYTOaQc/Sgdbp+HEDHySXNLiOaF/QBbPLAQ3KpTa2N4kILTDeWIkpQ7FKZZIH+XsANdLq+AOZZRlHZJqSHJdrX6x1gweQfN/mUE5vdl9Ft7tRTe8ahr4V1th92UiiDBPdunpg2CBNOzSXCQJO9JhHD429Nge1X5FByRVkoPkoxu+GSUtsjncktb+wppzfMTINQ8v3HMjLKnl1AFmuecCdp008zcxM5N0/t/3jRvkuQAiCJfPS4Fl9WzAYC+FvuHB6mXpTs8q+i1da84GzZkXwM4sip6bq2EE+DUSriFs6M7j6cBYt3vK8rs9vraGATQP5sA+r3zCGC5DnOdyIac1y9FV83a/9n5411/oODWgnTVJLBWZ6Ztz+yt9gXcb6XgbbL5mesXOHfmJ+ULiuy8ZguYw9JwHvL6RY+c3jO7Ob32oso+YvFf03xgHKoLVYX3Cs/T9OAXUrb1POU5WkDleAGvaM0IkMMgrBnKVSkpCu/nDZFcJXOujQ3O+43mCwP9yEiBMCM7Z1HlHa29W17Ex+OoU/kxj+pAwmkmgkCiKpBoHUi7sNs0rcEZH6fnblozzEVVDfg0KrbKybRW+oXGdaSQBxhxYlc7EVR6VlC/3/aaJNDY/o5gfRff2edvTYThbNDDo3E/TZMkTeg4mYzH6WSU5SM8HuQbjSJkJIFuCjvnQBXYHtXUqOuc7Pcf31LbNpoTUNUUvFbSfUb3xjZysKC+UQ3rOPDQUDKlBMNyp6PcwT3xxyzgD3wdvrmu8i7+dSr53W6mvakx16/1bij5X5L/KNlHR7EJS3qTlJKLyTgdXwxyOrqYUjy8wNNsOO5TRgb5OZ8C338BGKjjIscVAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:38:18</sys_created_on>
+        <sys_id>61f06ecac3cbda10c07d190ed40131d4</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:36:29</sys_updated_on>
+        <ui_id>d336421e-6c38-433c-876e-a1cbc43dfebb</ui_id>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9lcprFCUEGGBXgZBG6rRSGbHpVJFj34Al5zF+UBjEv89N4oQIqg6VukGTne/DPuf4XOflQAQnUzIA7geTYMTCIAz7vt8fD4J4FMZBn4cUICA9ktEUsFIByxXH9ZZKWwYOh5kCaoBHgcesUpCZ4xHzXOhC0v3KlWGEbYTkmCfTl9ceKajCHQ0oMj2cpa6FJGkMEkufG0znGM2+KNc8ZzZFXJFogg+uc+4yd9/nmMGmEk7g9wjsDGQcEEhCpYYeSWnGqcnVnkyNshhA0vwpk/u2YiMyUxNN6U6LP3jywC/rEkBmzInQLiMnUB1O5tTQJe7MjFWtXrlgoGtNOCTUSjPrxuqCp8KIPKtbDI1l051Lm2aPtSKk3aBzH1YjCChKniXymlay3ORvzw3IhcgqSRxFmTMq2xU1RonYmhLOgYCESuOUFoXI1lGh8q2omhFK6q0lLrxE5m94phbrzKOsxO2hqtRbYHxehVdUiZLED9wGm489ovd6JqnWJyqoYfTblkhqYo5CVKlQSRBVTiibmRKFucejtuCAH3vO9PHwI4exyclQnT1Pxt9FwXASjr75kaJUR9qu16Crq7gw/7Kb+9wYXAGyGYOf1eW/D9pNwkXsodt791gn3BwMv2wOxrc0B47GzQ/Cv+zv9z98YDtOqhyvO9bXBh/8X9b3Qz6+dPtZ9nN+vwJV4/eFAMn1OzAbs0OKsAxENewzw7vk3col28f/y1wfjPzquyHv/zf/gNe/JMHmufoIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:38:18</sys_created_on>
+        <sys_id>6df06ecac3cbda10c07d190ed40131d5</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:36:29</sys_updated_on>
+        <ui_id>1cbf5cb9-2ea7-4a9c-9069-27112a9711af</ui_id>
+        <values>H4sIAAAAAAAA/+1XW2/aMBj9K8jPiCWE+1tV1GnT1kql6kupIuM44Mokme20ZRH/fV9s51JoKWy8sPbR38U53+EcG99liAVohPqDsE2Hw7Yzcx3Hc5xBlzgDj868fq/vYeKgJorwkkKloCQWAawfMU/zQJadC4oVDXy3RVIhaKTWa8gHTCYcr25tGUTIgvEA8mh0d99ECRawo6ICjbKN1L6QOJ5RDqXXBaZNjGqV5OsgJukScPmsCP6wnWObaXwbQwaacjhOE9FnRaOAAo4Qc0mbaImjAKtYrNBIiRQCMHNwFfFVWbFgkTJzLvGzZL/hw147rwspDEYsB+XSt/yYcDjGCk9gZ6JSUdIVM0KloSSgIU65Oq/HTMFVolgcmRaFZ7zojnm6jC4NIajcoPZzpBJA0CSfM0duxgoni/jpugB5wSLNiB2RxwTzcoWVEmyWqhxOhiinmuIlThIWzf1ExI9MNwOUZWvOYdEKefwE35RsHrUwyXG3gFXcuoD4WIdvsWD5ED9hG2heN5FcyXOOpaxGAQ79X2mOxAxmR/A1C4aCvI8Ilqgz+MojtZjXTSv3GdmpLVJJyWxXqf3Zd7tDr9d3fIGx9GU6n1Opf4AtxU/qucO0vwe+Qvs3FuAGXqt8vfR17qXwdVvj0iSs7t3dureRSvhGMa/ofuCckO7tWCcv/Pc077i7NBUMKg0BApgBcz9klNeP+iKxrfVa5jCl74GqUPqZ/UbjwsJ6C67Vvl6+pn3dv6H99oHaf/vQHzjOKcn/Ix37ZKfYqFdp6iFORbTDAf6CSa2MN51QqzjMEXuALBzx3aDcNMQm+L/xg/fph//fD53uTqnV/laUqiZxFLAcsay5wpzMVF7TB0qUPItWX++yTCqsGGkNhsO+18U94vWx23Ydb+AE3bDv0Y7jem7PW6/vt110hB0Pc90eVJSvjZRT+R411nNlUtimuu/KC63Y0Xqvc6z3x4lZ76P8EyM7tRYOK20FKRAEb+v6c3uKDOwpGk1RFEd0ippTlFf5ubh0GCoAXJnQsSxbr00kFdhu4NaWVXeAV1JXSrKgAWhTR19EfG0GGz/Ga38PTgr/jVPaGBtStmmyvitxGl7Y1p03sQV6py83rH73dY9293U+7fev9gOYzC+fF3Cxwel3RE/e/wGIADtrAhMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>d87dc38a-c86d-4c1f-a039-4ab59122fe91</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:14:57</sys_created_on>
+        <sys_id>9917fe46c34fda10c07d190ed40131c7</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:36:29</sys_updated_on>
+        <ui_id>c9c70bf4-78a8-4e3e-a8f3-f11f425e431b</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5GfoyppSgd9m6iQJvEhwcQLg+jWvk2tOXZmO9Cu6n/fTeKUCBADiT2g5c33+trnnJyT3GyZFGzGJiiS9Cid8izNsnGSjA8n6WKaLdKxyAAxZTHTUCLttMiNFbS+B1U3he322CJ4FHk64rW1qP1uR30hXaVgcx22UYWvpBLUZ7Ob25hVYOlEj5bNtk9ab4WkYIGKtl72mJ5i9JuqWQvD65Jw5bIvnobJeehE3+bUoaEGTprEDNcetUACsgTlMGYlaAHe2A2beVtTgUiLC602+x0rqX1HtIS1k7/p5knS7FsiMeNBhP0yDwJ15eUcPFzRydzXdq+XkRxdp4nAJdTKHw9r3YaLykujuxEPC9VPG1WX+rxThO0PGLyP2hEIrBqeDfKO1vJqZR4ue5AnUreSBIrKcFD7FXhv5aL2DZwtQ4WtxiVUldRFXllzL9thglKOCkWL0VKZB7rTyUKPgDe4R6QqjE6oPm/L12BlQ+KMjqHhXczcxh0rcO6RCmmY/6obJB2xQCFvVWglyFsnNMPcysp/pavuMQDfxcH0i4PXHMaPHg01OPPR+Os8PTjKpl+S3AK43NVFga59Fc/MfzXsvS8GbwDZx+B7+/JfBh2S8Kx2OpyNzrtGyMHBh+Xg8DPlIND49EH4m/2T8asf2IGTWse7gfWdpw/+jzpJMjG5s9gwxJyM4IzuqmcoJESgGnNsIlxL510kdeRXGHHiqUwRR5WiCYyUMT8jKEC+EJx/d9H7UvgGrfoUnkhUwr0gXh9BLImhx7wT80kMQzO6Ds39L+nDsphOk/b5RIn8b/5Mt38Aj0LacJAJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:24:22</sys_created_on>
+        <sys_id>c739f64ac34fda10c07d190ed4013143</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:36:29</sys_updated_on>
+        <ui_id>2c3acba9-996e-48ca-8077-0ab2bf2359ff</ui_id>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9FeQ1ihICTGFXgZBG6rRSGbHpVJFj34Al5zF+UBjEv89N4oQIqg6VukGTne/DPuf4XOflQAQnUzIE7geTYMzCIAwHvj+4GwbxOIyDAQ8pQED6JKMpYKUCliuO6y2VtgwcDjMF1ACPAo9ZpSAzxyPmudCFpPuVK8MI2wjJMU+mL699UlCFOxpQZHo4S10LSdIYJJY+N5jOMZp9Ua55zmyKuCLRBB9c59xlet/nmMGmEk7g9wnsDGQcEEhCpYY+SWnGqcnVnkyNshhA0vwpk/u2YiMyUxNN6U6LP3jy0C/rEkBmzInQLiMnUB1O5tTQJe7MjFWtXrlgoGtNOCTUSjPrxuqCp8KIPKtbDI1l051Lm2aPtSKk3aBzH1YjCChKniXymlay3ORvzw3IhcgqSRxFmTMq2xU1RonYmhLOgYCESuOUFoXI1lGh8q2omhFK6q0lLrxE5m94phbrzKOsxO2hqtRbYHxehVdUiZLED9wGm499ovd6JqnWJyqoYfTblkhqYo5CVKlQSRBVTiibmRKFucejtuCAH/vO9PHoI4exyclQnT1Pxt9FwWgSjr/5kaJUR9qu16Crq7gw/7Kb+9wYXAGyGYOf1eW/D9pNwkXsodvbe6wTbg5GXzYHd7c0B47GzQ/Cv+zvDz58YDtOqhyvO9bXBh/8X9b3Qx5euv0s+zm/X4Gq8ftCgOT6HZiN2SFFWAaiGvaZ4V2yt3LJ9vH/MtcHY7/6bsj7/80/4PUvSF/rMfoIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:38:18</sys_created_on>
+        <sys_id>e9f06ecac3cbda10c07d190ed40131dd</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:36:29</sys_updated_on>
+        <ui_id>de64e908-9d2f-4ac4-97eb-6c4c9630f4ed</ui_id>
+        <values>H4sIAAAAAAAA/+VWXW/aMBT9KyhPVGJRApS27Gkqq7Spa6Uy9aV0lolvwJtjZ7ZDyxD/fdexoRl0XSv1pRov4PuVc07OTbhZRZxFw6gPLElP0kHWS3u9bpJ0j/vpdNCbpl3WowBp1IkkLQArNWRKMzwvqKhcYLU61UAtMJLGWaU1SLteY55xUwq6vA5lGMnmXDDMR8Ob205UUo0TLehouNpJPReSoFMQWHq1wbSL0S5Ld2YqqwrERfgmeB46RyHT+jTCDDY5OGnSieDegmSAQHIqDHSigkpGrdLLaGh1hQEkzS6lWG4r5lxaT7Sg94b/wiv3E1eXAzLLggjbIwkC+XA+opaOcXJmK73VS/EMjNeEQU4rYU+bMV9wWVqupG+xdCo23UpUhbzwikTbAY37URkEAaXj6ZB7Wvl4ru6uNiDPuKwlCRSFyqjYnqi1mk8r6+CsIhBQa1zQsuRyRkqtFrxuRihFPBN4iHOh7vCahs9kTDOHO0ZVaXyG8VEdvqaaOxJfcAw2rzuRWZpTQY15oIIakp+VQ+KJBQqkVqGWgNROcM2Z5qX9gJdaQAC+7gTTTw+fclh28mCoxswH49+T9PCkNzhKiKbUEFPNZmDqW7Fn/nEz97I1eAbIzRp8rW/+46DDJuzFzpu9rQufCHtw+Gp7cPyW9iDQePOL8C/7J90nH7ANJ9WONw3rG4sP/EmVJD3W/6bBMQSCRjBK+mjO3vlLA9vfhhd2v2xfnsFqsy9nHAQzj9DcLAsUCNsC8bR3FiYkW9chuX15vNrWpIOk/ryh3fkP3iGeoo85zH8a2EWeqkeT6ZZvoSL0tLzrWzkjNRGSpoQIpX6QqiT+v0wcvlAFJ5CJZ2A/q0pLKj5Kq5ft9OD9RP5l7k44RsWL9kGMzuG27Wq6R5OJ9D8O9qbEZs5z264T6Cu5N+674nJvDGpq6ALY1irr9fr2N00cRuhuCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=38de920ac3cbda10c07d190ed40131f7^sys_idNOT IN42a6ee82c30fda10c07d190ed40131ad,61f06ecac3cbda10c07d190ed40131d7,9517fe46c34fda10c07d190ed40131c9,edf06ecac3cbda10c07d190ed40131dc"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">4aa6ee82c30fda10c07d190ed40131ac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 21:03:11</sys_created_on>
+        <sys_id>42a6ee82c30fda10c07d190ed40131ad</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:06</sys_updated_on>
+        <ui_id>d87dc38a-c86d-4c1f-a039-4ab59122fe91</ui_id>
+        <values>H4sIAAAAAAAA/51SwW7bMAz9F50Tw47dxM6twFCgh65AV/QyFAYt0YlQWdIkOaln+N9HxU429LiTzUfy8T2RIzN9sH3wr+bee3nQbP/zfcWkjhj9j0xDh2zPZMDOsxU7gepjPI6Ci2pXZNUaeNasi7tyty4xzdd3ZdFURSV2ZbVLXpAbJ/w0UauQ3ioY3v6fgR+lEg4XkRYcaQvo2H78kgqDxVpBg4oGLQzULwWFWSXaKksrnm+2+SZNN2WRNdu8yTYiBxRbqrt2Pi6mv7xBZKfQ3XjpE1Vs0hXDz4BaIA1qQXlcsQ60gGDcwPbB9QQ4BPGs1XCrOEodiI7F2k8vfxN3lqaxsEVyxHFO3sJ6ecgZ5kcjOT7bII2ekQCNWnq4UX2nv8/y4wqwhV6F6woI6T3xoY2ao4pFUvvjaM4v14EPUl/8LUllOKhbBCE42fQBfVwDKuyIqO7AWqkPtXXmJC/NpKVLDoqCpFXmTEPjuSXAo/CEngiSB8K/XeA3cDK6eCIaap4u7utffZw7+1gU17NpKvDcSRvuie6Ei7jpPd7rzOTnwxDIpaeBrxF7vF55TAy0ZMn/hc7GfUSpf7HpD/1LOSUvAwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">25f06ecac3cbda10c07d190ed40131d6</block>
+        <comment>sugestão aprovada</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:38:18</sys_created_on>
+        <sys_id>61f06ecac3cbda10c07d190ed40131d7</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:06</sys_updated_on>
+        <ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</ui_id>
+        <values>H4sIAAAAAAAA/+1UTW/bMAz9K4PPjuGPOJ1zKzYUGLCtwFr0shUGLdGJMFnyJDlpFuS/j/JHEqwpNgw97mKYTyL53jPpfaA713bO3utra8VKBcuvj2EglMfofR8oaDBYBkwrLpzQquyBMNiA7PwBvXJhWwm7hxPC1kJyg2O1FgzlODTBcv/bkdu1WEqoUFLinTNCrShdcIrqGOqkYAnL0kWWxnH6dp5Ui6xKUp4BQkb3psR3E7k3H3skfJG170e4nTppwz2tJA4DfHKoOFLrGqTFMGhAcXDa7I6IQeC3Sp6AtVBuUNzAkxU/qXaa5/5ijaSRjXYcw3K0anJJC4a3rSc4IA4qOVmoZdeoz4MObzLW0El3ZnJnqR62nrRnMVKq79Z6+2VqeCNUL3A8lJqBPEbgyIaqc2j9h0GJDRUqG2hbMqdsjd6IPpm4NNFKUhDVUm+pqZ+UCJgnHpFHEN0Q/r6HH8AIr+ITlaHkgWYFVrCynyoq5wxJOPS2lD86T2gQOEopBzfogmVGtO6a+mxwZH0In4/k2TTu9wmr6pxVxSxFuJrNoWCzIl5QeJUkKRT0hDoibqQOZGkdODwcvnVxnPEBpQl4NtKvVfY19qKAvM6TOL+8F/PFpb24sBEvL0P6h2Xwn+8vdyGO4//LcL4MwpbDUI/a+ub/vAuPfvCHDnaYG45MWCJy77EP01/cH+xoAAQ7h7bafPcSTtjhFwhxlDkPBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5917fe46c34fda10c07d190ed40131c8</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>d87dc38a-c86d-4c1f-a039-4ab59122fe91</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:14:57</sys_created_on>
+        <sys_id>9517fe46c34fda10c07d190ed40131c9</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:06</sys_updated_on>
+        <ui_id>7e121018-168b-408f-9136-35446741b2d4</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e5f06ecac3cbda10c07d190ed40131dc</block>
+        <comment/>
+        <connected_to>b7cf0d86-f4dc-462c-b648-c18637f95b96</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:38:18</sys_created_on>
+        <sys_id>edf06ecac3cbda10c07d190ed40131dc</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:06</sys_updated_on>
+        <ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</ui_id>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lUJnWaCk2Kl9CxoEKNA2QBPk0gbCilrZbClSJSk7rqB/71IP28gDLYoip14McajdnRnNug104+rG2Vt9Ya1Yq2D15T4MhPIYPbeBggqDVcC1KoQTWmU9EAZbkI2/oMdC2FrC/u6I8I2QhcGxWw2GahyaYNU+unL7GjMJOUoqvHFGqDWVi4JOJYMyXvKYp8kiTRhL3p7F+SLN46RIASGh96bCdxO5Nx96JHyRtZ9HuJ0maVN4WjELA3xwqAqk0SVIi2FQgSrAabM/IAahuFbyCGyEcoPiCh6s+Em9k/ncv1giaeSjHYdjNlo1uaQFx+vaExwQB7mcLNSyqdSnQYc3GUtopDsxubHUD2tP2rMYKZU3G737PA28EqoXOF5KzUEeTuDIhrxxaP2HQYkVNcoqqGsyJ6uN3oq+mLhU0VrSISql3tFQn5QIuCcekUcQXRF+2cN3YIRX8ZHaUPFAMwcreNanito5QxK63pbsR+MJDQJHKdngBr1guRG1u6A5WxxZd+HTSJ6ksW1jnpdzni9nCcL57AyWfLZkCzqex3ECS/qFMiJupA5kZh047LqvDWMppfIbckcJeBLpf9X2FfYifm4vntmIl5ch+c0y+M/3h7vAGPu/DKfLIGw2hHrU1g//612498EfJtghNwVyYYnIrcfeT//i/mJPARD8FNpp891LOGLdL7l/4MEPBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_38de920ac3cbda10c07d190ed40131f7^sys_idNOT IN110f564ac3cbda10c07d190ed4013119,250f564ac3cbda10c07d190ed401311c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_38de920ac3cbda10c07d190ed40131f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:29:50</sys_created_on>
+        <sys_id>110f564ac3cbda10c07d190ed4013119</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 20:29:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_38de920ac3cbda10c07d190ed40131f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 20:29:50</sys_created_on>
+        <sys_id>250f564ac3cbda10c07d190ed401311c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 20:29:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_38de920ac3cbda10c07d190ed40131f7"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>this flow create an approved media suuuggestion in the media table</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>creating_a_suggested_film</internal_name>
+        <label_cache>[{"name":"Created_1.current.release_year","label":"Trigger - Record Created➛Suggestion Record➛Release Year","reference":"","reference_display":"Release Year","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"release_year","usedInstances":{"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"dcd97419-ac1b-4587-8e03-584b949d7897.__action_status__.code","label":"1 - Look Up Records➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{},"attributes":{}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.title","label":"5 - Update Record➛Suggestion Record➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"title","usedInstances":{"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Suggestion Record","reference":"x_1593670_raas_suggestion","reference_display":"Suggestion","type":"reference","base_type":"reference","usedInstances":{"d336421e-6c38-433c-876e-a1cbc43dfebb":["record"],"1cbf5cb9-2ea7-4a9c-9069-27112a9711af":["record"],"ce2dcca6-4fbc-400a-a095-578a0e439d58":["record"],"de64e908-9d2f-4ac4-97eb-6c4c9630f4ed":["record"],"9012435e-7f0d-4ff2-b01f-8ef0631a94db":["conditions"],"c9c70bf4-78a8-4e3e-a8f3-f11f425e431b":["record"],"2c3acba9-996e-48ca-8077-0ab2bf2359ff":["record"],"dc5d64d0-1504-4e16-b466-836481c502e3":["conditions"]},"attributes":{}},{"name":"{{static.899735a6c37a1210380d5f73e4013163}}","label":"RaaS Administrators","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"1cbf5cb9-2ea7-4a9c-9069-27112a9711af":["approval_conditions"]}},{"name":"1cbf5cb9-2ea7-4a9c-9069-27112a9711af.approval_state","label":"6 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"b7cf0d86-f4dc-462c-b648-c18637f95b96":["condition"],"99b04fa9-a601-45eb-9e31-8d5a2639768b":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.title","label":"Trigger - Record Created➛Suggestion Record➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"title","usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["title"],"8b462a41-47a3-4cdf-a7a5-1f70a295557a":["condition"],"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.type","label":"5 - Update Record➛Suggestion Record➛Type","reference":"","reference_display":"Type","type":"choice","base_type":"choice","parent_table_name":"x_1593670_raas_suggestion","column_name":"type","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Movie","used":false,"image":"","reference":false,"rawLabel":"Movie","selected":false,"missing":false,"value":"movie","parameters":{"name":"x_1593670_raas_suggestion","dependent_values":[""]}},{"label":"Series","used":false,"image":"","reference":false,"rawLabel":"Series","selected":false,"missing":false,"value":"series","parameters":{"name":"x_1593670_raas_suggestion","dependent_values":[""]}}],"usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["type"]}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.release_year","label":"5 - Update Record➛Suggestion Record➛Release Year","reference":"","reference_display":"Release Year","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"release_year","usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["release_year"]}},{"name":"dcd97419-ac1b-4587-8e03-584b949d7897.Records","label":"1 - Look Up Records➛Media Records","reference":"x_1593670_raas_media","reference_display":"Media","type":"records","base_type":"records","usedInstances":{"afd1a81d-aa38-46b6-b1e4-755875bd3b57":["items"],"d87dc38a-c86d-4c1f-a039-4ab59122fe91":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record","label":"5 - Update Record➛Suggestion Record","reference":"x_1593670_raas_suggestion","reference_display":"Suggestion","type":"reference","base_type":"reference","usedInstances":{"ce2dcca6-4fbc-400a-a095-578a0e439d58":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Suggestion Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1593670_raas_suggestion","column_name":"sys_id","usedInstances":{"82cc6521-036c-4645-bfb6-f2737fa1e446":["conditions"]}}]</label_cache>
+        <master>true</master>
+        <name>Creating a suggested film </name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Creating a suggested film ">38de920ac3cbda10c07d190ed40131f7</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6ff7f2c6c34fda10c07d190ed4013125</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:08</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=6ff7f2c6c34fda10c07d190ed4013125^sys_idNOT INabf7f2c6c34fda10c07d190ed4013126"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>6ff7f2c6c34fda10c07d190ed4013125</id>
+        <name>Creating a suggested film </name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>abf7f2c6c34fda10c07d190ed4013126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:18:56</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=abf7f2c6c34fda10c07d190ed4013126"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=6ff7f2c6c34fda10c07d190ed4013125^sys_idNOT IN23f7f2c6c34fda10c07d190ed4013138,2ff7f2c6c34fda10c07d190ed4013127"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</model>
+        <model_id>6ff7f2c6c34fda10c07d190ed4013125</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6ff7f2c6c34fda10c07d190ed4013125</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>23f7f2c6c34fda10c07d190ed4013138</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=23f7f2c6c34fda10c07d190ed4013138"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</model>
+        <model_id>6ff7f2c6c34fda10c07d190ed4013125</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6ff7f2c6c34fda10c07d190ed4013125</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>2ff7f2c6c34fda10c07d190ed4013127</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2ff7f2c6c34fda10c07d190ed4013127"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=6ff7f2c6c34fda10c07d190ed4013125^sys_idNOT IN3bf7f2c6c34fda10c07d190ed401315a"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>3bf7f2c6c34fda10c07d190ed401315a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:18:56</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuvgS523rZNEA2w1qe9uHIBUoaWgLpSlXpJS4i/x7h7rYsi6+Z5O8BDBJcc4cnjlD5uG7zogLTL/Wp8RloHf0gEuIOGHT1RJwWKphh5OFmlsQ7hMZRiv9WkYxdPQw8iHSr82OnhAWw2Ql7nz8CJemX+Sf6/k0/n52zN7Q7g8MJyJEOCKezUDIIOS4xg/EkpHVn/nSSXnOmwfMj4Dr1w+PHX1JItxeqtDfK1OBiu9RjwwtMDzbtC3LMKyrrun2bde0fJuAYeCG1bQreGVD9ptk4VkC9wFDUcIENBATAfHvOVutV8yR14yZBXkWwX+4+5Wh1lFA7B5kc+ufTk5GNuzNw8CD+2VKRjqS4cwmQxYv+NcMv6IRKImZLGjEkVjgfrBUkBWIHBGdzMOncRHwc8DT7PJJFnqErX8RKaPAjSUIRTgNGFLvZNyIMI5S9OPb0f34xvnr03T02+3YGd9OpuO70fT2Rn9J83L+jdWOGcIci5Ol87I++88BMHWAPF64iKajCy8KlvKTJ4MEcjgvnY1oRyH3g1wiFeF6xZTYFm6eUnGYhtGqXa+0eaHfv2//qCs1GzxOov0+IT6QFom6tCTRcpIN0GRDvuXsdok1HzlErV3DeCO9ZhV1slwXoQ/sZrOdjpPoLJET8GUsFVtPhEvhyNAhvu+UeFRLEdM+/Wa5vewVaxRz/MBZn0ddsilta/6+BALhPmDBFdykW+I8/ZJvOY65FuLB4R/NiyOkRmqFhdG7BZnljNIJMPBkSQT0myj/+j0QIuCzEup10JSDWsx1OBSTVqSUxRZnBn88sV7r/CYV3ip1e3TRmialLlDLGKiSNQ3bpaYxMHqE+rZheFapaOtgWlHKyum/SvEeV7oi1R07QGVVinPwRln4Bykm2ZZbQYJSQ+4Qo8tAMy8EzVLQKk5nH2V1a1lmwzfb6tyV2oU7OvETgl/4hzregWZHWfiELnuC0bnE+2cWhTH3q86j9tQCrm1WaD/l/P18QdOjYQS7AWyveCO72zBcaJTw1QWMzqamO4QuGOhvNlqb2xsOXY9YlA76A7DMitFtYDRi+xAGt0dYSZMy28yuUSNJk7SOsLkzANYs72iA55tdLsxGq8vmPoapPc2BOwg1cpiyrZq3zVjgQzF3cmHXoiSbUj63uOnV0OuZg4E3wGcHFjftgkvMrtUjw0HfvupVirsGZRdM2UDCD3mMiJVIgbQU/rds6n09pF9ToQKkVE3m+N7L8XaafkOyIKX+p45FS/0jjLSvIf/lbrNOmwC2tfRFeqkmfAgKdbDa68JwQzmv3QIw9K84vhVa3R5bWHnLN1FFD8l2Wme/iaB71RtSu9lN6LDJTTZg2mG++0vDgcWQtJZV0+3hUG0njSXS2u5PUGtFJuV7wI6LyqVIMS9OivV6pNhnX46KWmx9CJ4C9gN1q/QKcU7LUjHBCWnZp29CDSc0DKIFVMv/64fvenelyTkgpQxvwRhQU9HPNehyw6hDWSv4xwLJ7tW1xoXDWn5XetOeVDn1yz5hwR+QXs9uueUOq0/YJkB78L77DnV0ASRN9bSzTR23b3XPxkZVUue2Ig5sQRfNurkPnZd1Yyfal/X5PWbXA7wBxTvtHo//A4WtCYizHgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=6ff7f2c6c34fda10c07d190ed4013125^sys_idNOT IN27f7f2c6c34fda10c07d190ed4013148,27f7f2c6c34fda10c07d190ed4013149,394a7e8ac34fda10c07d190ed4013197,73f7f2c6c34fda10c07d190ed401315a,77f7f2c6c34fda10c07d190ed401314c,7ff7f2c6c34fda10c07d190ed401314b,b3f7f2c6c34fda10c07d190ed401314d,f4493a4ac34fda10c07d190ed401319f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>27f7f2c6c34fda10c07d190ed4013148</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:21:15</sys_updated_on>
+        <ui_id>1cbf5cb9-2ea7-4a9c-9069-27112a9711af</ui_id>
+        <values>H4sIAAAAAAAA/+1XW2/aMBj9K8jPiCWE+1tV1GnT1kql6kupIuM44Mokme20ZRH/fV9s51JoKWy8sPbR38U53+EcG99liAVohPqDsE2Hw7Yzcx3Hc5xBlzgDj868fq/vYeKgJorwkkKloCQWAawfMU/zQJadC4oVDXy3RVIhaKTWa8gHTCYcr25tGUTIgvEA8mh0d99ECRawo6ICjbKN1L6QOJ5RDqXXBaZNjGqV5OsgJukScPmsCP6wnWObaXwbQwaacjhOE9FnRaOAAo4Qc0mbaImjAKtYrNBIiRQCMHNwFfFVWbFgkTJzLvGzZL/hw147rwspDEYsB+XSt/yYcDjGCk9gZ6JSUdIVM0KloSSgIU65Oq/HTMFVolgcmRaFZ7zojnm6jC4NIajcoPZzpBJA0CSfM0duxgoni/jpugB5wSLNiB2RxwTzcoWVEmyWqhxOhiinmuIlThIWzf1ExI9MNwOUZWvOYdEKefwE35RsHrUwyXG3gFXcuoD4WIdvsWD5ED9hG2heN5FcyXOOpaxGAQ79X2mOxAxmR/A1C4aCvI8Ilqgz+MojtZjXTSv3GdmpLVJJyWxXqf3Zd7tDr9d3fIGx9GU6n1Opf4AtxU/qucO0vwe+Qvs3FuAGXqt8vfR17qXwdVvj0iSs7t3dureRSvhGMa/ofuCckO7tWCcv/Pc077i7NBUMKg0BApgBcz9klNeP+iKxrfVa5jCl74GqUPqZ/UbjwsJ6C67Vvl6+pn3dv6H99oHaf/vQHzjOKcn/Ix37ZKfYqFdp6iFORbTDAf6CSa2MN51QqzjMEXuALBzx3aDcNMQm+L/xg/fph//fD53uTqnV/laUqiZxFLAcsay5wpzMVF7TB0qUPItWX++yTCqsGGkNhsO+18U94vWx23Ydb+AE3bDv0Y7jem7PW6/vt110hB0Pc90eVJSvjZRT+R411nNlUtimuu/KC63Y0Xqvc6z3x4lZ76P8EyM7tRYOK20FKRAEb+v6c3uKDOwpGk1RFEd0ippTlFf5ubh0GCoAXJnQsSxbr00kFdhu4NaWVXeAV1JXSrKgAWhTR19EfG0GGz/Ga38PTgr/jVPaGBtStmmyvitxGl7Y1p03sQV6py83rH73dY9293U+7fev9gOYzC+fF3Cxwel3RE/e/wGIADtrAhMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>27f7f2c6c34fda10c07d190ed4013149</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:08</sys_updated_on>
+        <ui_id>dcd97419-ac1b-4587-8e03-584b949d7897</ui_id>
+        <values>H4sIAAAAAAAA/+VX226jMBD9lYjnCEFJ0svbKlWllXqR2qov3V1rwCax1gHWNknTiH/fARuCEtJNpERqtY+ei31m5hxjXlcOp86VcxEPPA/84cW55wWB541GQQR+GAajKPTCQej0nQRmDCM1hILhcg4iL9dvxB9eBqNzj0gARWaMckA35SoTsHyxUXfWHE25oJIlztXrz76TgcRNNZPO1WrDtS8qASETGPpsYW2g1MusWZLKZ2y37bTevXGkkpZQvL7D3jRLKEMMMQjF+s4MEgo6lcvGIhnQh0SsDVOeaNzRKYPfFH/Hcy+8Mi5mWFXEjK9ZEtshY46vQcOTlnmkc2lDo2nKI6ZMPyiLIRd63LaZgIdM8zQxKaZsk52KfJbcm3Y4zQb1QNCSKwTBsrLQErktI36apovHGuUNT6qeWKdIIxDNCrSWPMx1iWflMMFmuBGZQZbxZEIymc55lYxYZu5E4MKNRbrAQxWfJC5EJXAX+wruDdqvK/MLSF5WcYfbYDIC4gIZQswIVZrLqpVzEolcVQ4JiTJ7OUXfUUs1FqDUunJsOfmTl7hNH2zFxDStTIkkz/Q33GLObHFFfy9hDL015aI0obxEoVrq0FwL9iPHXLpajZEzmlHiu1Eusb3ardxF8Uti8wDHsWQgd0e3o4piW2SnPeyY0q36Vkt33G5cVzOtiLdst10bWBH7RxMx1vGVZIyHfz4VH65L04J/iDM6/5BkwzWfVCo1Mb1sqXNbQgfzfA8INc8fSmb2wuUuVJbmMWeCdn2rbkrHxrfq7P/8Vn1KkiMgSsz0eCJ4Ul3JCPRU7Pc+vmIvN3hW0WvN/coGKtrWAPR02ns/WAl7wKmV8IRn954Nng6I9X1fUWbzrq+NVgDB0QQQnB1HAKumzKaRHT2v35rlNOv49zIeNuORgq0Ev+gS2EFn+oeeeVZsCzg4SMFtshnP9Q7OHflRukOR/VNeAVNMtecRo1+y4HTC9Pr0OoqmegHid5ffMo7Ug6rKO8EDd/ChbEf+WqKoFCKZwuG1X7g+Po+27xDfNebDrpA9sNTtuIO33mMDphOhvUZQ6WxSzaZ9j3xvrJbkgyM+GD/tl7QeVqcG65l9if/C4wnh5183gcrbBBEAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:28:55</sys_created_on>
+        <sys_id>394a7e8ac34fda10c07d190ed4013197</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:28:55</sys_updated_on>
+        <ui_id>dc5d64d0-1504-4e16-b466-836481c502e3</ui_id>
+        <values>H4sIAAAAAAAA/+VYTW/bOBD9K4LOjlfyt3MrEhgo0G2AJttLt0tQJBVzlyZVkkqaGP7vHYqUbdiKbaEOkGBv5nBIvpl5b0j52zLmNL6M6TSZ5tPpcDJOkn4/SUajPsFplvVHJEsyPIg7scQLBp4WZ4LB8AGL0o3Nk8FFoRWMkf/BNExTbgqBn74Grw/BBWbInAuqmYwvv33vxAXWsK+FNZfLnalTgQmcMQGudwHZDlD7VKyHqJrztk/by6LPfkJp6qAknZj9tExSBhhyLAzrxAssKbZKP60tmmF6I8XGMOfSwo6xc/5p+DOcO0mcX84gKsL83HqIQpK8Ob/GFt9aXRJb6uBK5ooTZnw+KMtxKezVts073BSWK+mX+LD9aiXKhfzs0xGvN6hrApbSAAhWuEAd8hBGfjtXj19qlDMuq5yESaEIlLEeYWs1z0rr8CxjJtgCNkILIAKX98jVnFeLAcuiey9g0M2FeoRDDb+XXUwc8C7kFXdnYL+uzF+x5i6KP2Gbikw5F8AQ5EtoVKmrVD4gIkpTTWgsjd8rXnUcJa8ENmYTOaQc/Sgdbp+HEDHySXNLiOaF/QBbPLAQ3KpTa2N4kILTDeWIkpQ7FKZZIH+XsANdLq+AOZZRlHZJqSHJdrX6x1gweQfN/mUE5vdl9Ft7tRTe8ahr4V1th92UiiDBPdunpg2CBNOzSXCQJO9JhHD429Nge1X5FByRVkoPkoxu+GSUtsjncktb+wppzfMTINQ8v3HMjLKnl1AFmuecCdp008zcxM5N0/t/3jRvkuQAiCJfPS4Fl9WzAYC+FvuHB6mXpTs8q+i1da84GzZkXwM4sip6bq2EE+DUSriFs6M7j6cBYt3vK8rs9vraGATQP5sA+r3zCGC5DnOdyIac1y9FV83a/9n5411/oODWgnTVJLBWZ6Ztz+yt9gXcb6XgbbL5mesXOHfmJ+ULiuy8ZguYw9JwHvL6RY+c3jO7Ob32oso+YvFf03xgHKoLVYX3Cs/T9OAXUrb1POU5WkDleAGvaM0IkMMgrBnKVSkpCu/nDZFcJXOujQ3O+43mCwP9yEiBMCM7Z1HlHa29W17Ex+OoU/kxj+pAwmkmgkCiKpBoHUi7sNs0rcEZH6fnblozzEVVDfg0KrbKybRW+oXGdaSQBxhxYlc7EVR6VlC/3/aaJNDY/o5gfRff2edvTYThbNDDo3E/TZMkTeg4mYzH6WSU5SM8HuQbjSJkJIFuCjvnQBXYHtXUqOuc7Pcf31LbNpoTUNUUvFbSfUb3xjZysKC+UQ3rOPDQUDKlBMNyp6PcwT3xxyzgD3wdvrmu8i7+dSr53W6mvakx16/1bij5X5L/KNlHR7EJS3qTlJKLyTgdXwxyOrqYUjy8wNNsOO5TRgb5OZ8C338BGKjjIscVAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>73f7f2c6c34fda10c07d190ed401315a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:28:55</sys_updated_on>
+        <ui_id>de64e908-9d2f-4ac4-97eb-6c4c9630f4ed</ui_id>
+        <values>H4sIAAAAAAAA/+VWXW/aMBT9KyhPVGJRApS27Gkqq7Spa6Uy9aV0lolvwJtjZ7ZDyxD/fdexoRl0XSv1pRov4PuVc07OTbhZRZxFw6gPLElP0kHWS3u9bpJ0j/vpdNCbpl3WowBp1IkkLQArNWRKMzwvqKhcYLU61UAtMJLGWaU1SLteY55xUwq6vA5lGMnmXDDMR8Ob205UUo0TLehouNpJPReSoFMQWHq1wbSL0S5Ld2YqqwrERfgmeB46RyHT+jTCDDY5OGnSieDegmSAQHIqDHSigkpGrdLLaGh1hQEkzS6lWG4r5lxaT7Sg94b/wiv3E1eXAzLLggjbIwkC+XA+opaOcXJmK73VS/EMjNeEQU4rYU+bMV9wWVqupG+xdCo23UpUhbzwikTbAY37URkEAaXj6ZB7Wvl4ru6uNiDPuKwlCRSFyqjYnqi1mk8r6+CsIhBQa1zQsuRyRkqtFrxuRihFPBN4iHOh7vCahs9kTDOHO0ZVaXyG8VEdvqaaOxJfcAw2rzuRWZpTQY15oIIakp+VQ+KJBQqkVqGWgNROcM2Z5qX9gJdaQAC+7gTTTw+fclh28mCoxswH49+T9PCkNzhKiKbUEFPNZmDqW7Fn/nEz97I1eAbIzRp8rW/+46DDJuzFzpu9rQufCHtw+Gp7cPyW9iDQePOL8C/7J90nH7ANJ9WONw3rG4sP/EmVJD3W/6bBMQSCRjBK+mjO3vlLA9vfhhd2v2xfnsFqsy9nHAQzj9DcLAsUCNsC8bR3FiYkW9chuX15vNrWpIOk/ryh3fkP3iGeoo85zH8a2EWeqkeT6ZZvoSL0tLzrWzkjNRGSpoQIpX6QqiT+v0wcvlAFJ5CJZ2A/q0pLKj5Kq5ft9OD9RP5l7k44RsWL9kGMzuG27Wq6R5OJ9D8O9qbEZs5z264T6Cu5N+674nJvDGpq6ALY1irr9fr2N00cRuhuCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>77f7f2c6c34fda10c07d190ed401314c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:21:15</sys_updated_on>
+        <ui_id>d336421e-6c38-433c-876e-a1cbc43dfebb</ui_id>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9lcprFCUEGGBXgZBG6rRSGbHpVJFj34Al5zF+UBjEv89N4oQIqg6VukGTne/DPuf4XOflQAQnUzIA7geTYMTCIAz7vt8fD4J4FMZBn4cUICA9ktEUsFIByxXH9ZZKWwYOh5kCaoBHgcesUpCZ4xHzXOhC0v3KlWGEbYTkmCfTl9ceKajCHQ0oMj2cpa6FJGkMEkufG0znGM2+KNc8ZzZFXJFogg+uc+4yd9/nmMGmEk7g9wjsDGQcEEhCpYYeSWnGqcnVnkyNshhA0vwpk/u2YiMyUxNN6U6LP3jywC/rEkBmzInQLiMnUB1O5tTQJe7MjFWtXrlgoGtNOCTUSjPrxuqCp8KIPKtbDI1l051Lm2aPtSKk3aBzH1YjCChKniXymlay3ORvzw3IhcgqSRxFmTMq2xU1RonYmhLOgYCESuOUFoXI1lGh8q2omhFK6q0lLrxE5m94phbrzKOsxO2hqtRbYHxehVdUiZLED9wGm489ovd6JqnWJyqoYfTblkhqYo5CVKlQSRBVTiibmRKFucejtuCAH3vO9PHwI4exyclQnT1Pxt9FwXASjr75kaJUR9qu16Crq7gw/7Kb+9wYXAGyGYOf1eW/D9pNwkXsodt791gn3BwMv2wOxrc0B47GzQ/Cv+zv9z98YDtOqhyvO9bXBh/8X9b3Qz6+dPtZ9nN+vwJV4/eFAMn1OzAbs0OKsAxENewzw7vk3col28f/y1wfjPzquyHv/zf/gNe/JMHmufoIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>d87dc38a-c86d-4c1f-a039-4ab59122fe91</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>7ff7f2c6c34fda10c07d190ed401314b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:31:18</sys_updated_on>
+        <ui_id>c9c70bf4-78a8-4e3e-a8f3-f11f425e431b</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5GfoyppSgd9m6iQJvEhwcQLg+jWvk2tOXZmO9Cu6n/fTeKUCBADiT2g5c33+trnnJyT3GyZFGzGJiiS9Cid8izNsnGSjA8n6WKaLdKxyAAxZTHTUCLttMiNFbS+B1U3he322CJ4FHk64rW1qP1uR30hXaVgcx22UYWvpBLUZ7Ob25hVYOlEj5bNtk9ab4WkYIGKtl72mJ5i9JuqWQvD65Jw5bIvnobJeehE3+bUoaEGTprEDNcetUACsgTlMGYlaAHe2A2beVtTgUiLC602+x0rqX1HtIS1k7/p5knS7FsiMeNBhP0yDwJ15eUcPFzRydzXdq+XkRxdp4nAJdTKHw9r3YaLykujuxEPC9VPG1WX+rxThO0PGLyP2hEIrBqeDfKO1vJqZR4ue5AnUreSBIrKcFD7FXhv5aL2DZwtQ4WtxiVUldRFXllzL9thglKOCkWL0VKZB7rTyUKPgDe4R6QqjE6oPm/L12BlQ+KMjqHhXczcxh0rcO6RCmmY/6obJB2xQCFvVWglyFsnNMPcysp/pavuMQDfxcH0i4PXHMaPHg01OPPR+Os8PTjKpl+S3AK43NVFga59Fc/MfzXsvS8GbwDZx+B7+/JfBh2S8Kx2OpyNzrtGyMHBh+Xg8DPlIND49EH4m/2T8asf2IGTWse7gfWdpw/+jzpJMjG5s9gwxJyM4IzuqmcoJESgGnNsIlxL510kdeRXGHHiqUwRR5WiCYyUMT8jKEC+EJx/d9H7UvgGrfoUnkhUwr0gXh9BLImhx7wT80kMQzO6Ds39L+nDsphOk/b5RIn8b/5Mt38Aj0LacJAJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>b3f7f2c6c34fda10c07d190ed401314d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:20:57</sys_updated_on>
+        <ui_id>fb17a146-aa14-4f01-86cb-9c6f28ffe9c4</ui_id>
+        <values>H4sIAAAAAAAA/9VVy27iMBT9lcrrECWEpsBuRMVq2krTEZtOG93YN2DJeYztUBiUf5/rPCjqFM1Ds4Gd78vnHF9Ong5MCjZncYjB9SyMeRRG0TgIxtNJmMZRGo5FBIgT5rECcqRKC6nCpD14bAuqdsFdEl7PovgmSDSASXIUEigtpKkU7Fd91V0f5huphMaCzZ+ePVaBpmEWNZsf3qX+FJqCFBWVfnXYzkC1++rD2OfT3qv7LlFq4fAEHsOdxUIgAclAGfRYDoUAW+o9m1tdU0AjiIdC7Y8VG1lYGshc7c7IH3TtNHB1GRIzjl3ueEx6lbpwdgsWHmkyt7XuS/mmlBxNp4nADGplF6exruChsrIsupaWZt9dqjov7jtJ2HHA8CgUqQ2BwMrxdMh7Gtnjpnz9MqBcyqKVpE+qkoM6nsBaLdPaOjwHhgpzGpTkUFWyWCeVLreybSYsub9WdPAzVb7SpUauCx+4A+6TrOAvKX7bhlegpWNxR2OoufGY2ZuFAmPeuJCIyffaIemY9RySTgbXwrWs7Ce6YIs93MYbdl5gMDu7WGH6tkjtmpuTfbfSKvxWB0EkDocFbYBFkYQ+rzWJZf023TQvbr+GKhFF8WQc4ojum44mUcRH05sYRxDylE8ikWGa+ho5rZ7v+qhdk5JAb7NH0P8y5rS/aX79P14oi7+0j9+/8mAfS4lKmA+effAOzEk+i0m3Bu/8o09erfpk7yHh//KQMA7a3wU5SUfu4o3k5JtxxlKefwIxppL3SAcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:24:28</sys_created_on>
+        <sys_id>f4493a4ac34fda10c07d190ed401319f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:24:28</sys_updated_on>
+        <ui_id>2c3acba9-996e-48ca-8077-0ab2bf2359ff</ui_id>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9FeQ1ihICTGFXgZBG6rRSGbHpVJFj34Al5zF+UBjEv89N4oQIqg6VukGTne/DPuf4XOflQAQnUzIE7geTYMzCIAwHvj+4GwbxOIyDAQ8pQED6JKMpYKUCliuO6y2VtgwcDjMF1ACPAo9ZpSAzxyPmudCFpPuVK8MI2wjJMU+mL699UlCFOxpQZHo4S10LSdIYJJY+N5jOMZp9Ua55zmyKuCLRBB9c59xlet/nmMGmEk7g9wnsDGQcEEhCpYY+SWnGqcnVnkyNshhA0vwpk/u2YiMyUxNN6U6LP3jy0C/rEkBmzInQLiMnUB1O5tTQJe7MjFWtXrlgoGtNOCTUSjPrxuqCp8KIPKtbDI1l051Lm2aPtSKk3aBzH1YjCChKniXymlay3ORvzw3IhcgqSRxFmTMq2xU1RonYmhLOgYCESuOUFoXI1lGh8q2omhFK6q0lLrxE5m94phbrzKOsxO2hqtRbYHxehVdUiZLED9wGm499ovd6JqnWJyqoYfTblkhqYo5CVKlQSRBVTiibmRKFucejtuCAH/vO9PHoI4exyclQnT1Pxt9FwWgSjr/5kaJUR9qu16Crq7gw/7Kb+9wYXAGyGYOf1eW/D9pNwkXsodvbe6wTbg5GXzYHd7c0B47GzQ/Cv+zvDz58YDtOqhyvO9bXBh/8X9b3Qx5euv0s+zm/X4Gq8ftCgOT6HZiN2SFFWAaiGvaZ4V2yt3LJ9vH/MtcHY7/6bsj7/80/4PUvSF/rMfoIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=6ff7f2c6c34fda10c07d190ed4013125^sys_idNOT IN2ff7f2c6c34fda10c07d190ed4013145,6bf7f2c6c34fda10c07d190ed4013143,aff7f2c6c34fda10c07d190ed4013144,eff7f2c6c34fda10c07d190ed4013146"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">25f06ecac3cbda10c07d190ed40131d6</block>
+        <comment>sugestão aprovada</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>2ff7f2c6c34fda10c07d190ed4013145</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:08</sys_updated_on>
+        <ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvFHnM55KymFQbfCWvqyFXMty42YLHmSnDQz+e+7shwnrBlbWR/3Yqwj3atzju/BPVGdbTtr7tWlMfxJkuWXx4Bw6TB874mEhpEloUpW3HIliwEIyAZE5zbwteKmFbB7OCJ0zUWl2ditBY01lmmy7H/Z4hUW1BHUcU5jmiaLNImi5P08LhdpGSdVCgxSbCigZAKPrg403t0MSPBbfnbXOtxYzeXTuL4Zu9wdQKUrxyqOAsKeLZMVQz41CMMC0oCswCq9mxDNoLqV4gisubRecAPPhv/AC5MscwdrhhLp6Ma0LEanPFxfgQWk0lHb6ck4xSkz3pyK1dAJuzrF/IHb1kn1JRZKcahWomvkJ+8ImRqcfJjOIAnWOqWO+qijvlur7ecDy2suB1fGTaEoiGkFFr0rO+v49IQJ1mCjooG2RUeLVqsNH4qRSxM+CVyEtVBbvNRNVwjUEQ/RWAivEb8a4AfQ3Kn4iG2w2NMswXBaDJOI7dAmRvYBMTuzEmDMUSS6W3zvHEUveRRXeH9cCdW8tZd484aNOvbBy8E+mem+j2lZZ7TMZwmDi9kccjrLowUuL+I4gRyfUIfIFvWCKIwFy/b7r10UpZVHcZBeBOOt2r4uXTlkdRZH2fl0zRfn0nUmV6+MVPKHSLnv+ZeJiqLof6T+OVLcFD4Io7bh8jdM1KOLj79z8ppyg9TuHfbh8EdxGzscLk5Poa3S35yoI7b/CbUPioubBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">4aa6ee82c30fda10c07d190ed40131ac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>6bf7f2c6c34fda10c07d190ed4013143</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:08</sys_updated_on>
+        <ui_id>d87dc38a-c86d-4c1f-a039-4ab59122fe91</ui_id>
+        <values>H4sIAAAAAAAA/51TwW6jMBD9F58TBIEmIbeqVaVKu1sprXpZVdFgD4m1xmZtk5RF+fcdx4RWPfYE8zzz5r2HGZjpfNt592JunZN7zTa/32ZM6oDR+8A0NMg2THpsHJuxI6gu1MMguChXRVbOgWfVvLhZr+ZrTPP5zbqoyqIUq3W5SrbIjRXufKZRIV2roH/9PgM/SCUsjiJbsKTNo2Wb4cuRFLQgK0VdZmnJ88UyX6TpYl1k1TKvsoXIAcWSCBVUqKj1cXT3xazv21DaKGEEfowz2wmlRxCxSGcM3z1qgbS+BuVwxhrQAryxPdt42xFgEcSTVv3UcZDaEx0Lve9O/qONWZqGxhrJEMd4OJW7MccI1/fg4Zmoue/s2MoPRnJ0MQqBNXTK333GYsNT66XRccRDpa7TRnWN/hWTYBPB9bMR0jkSgW0wGqSPPurngzltryofpL6EMh4qw0FNFXhvZdX5oGdgqLAhol0DbSv1ftdac5SXYdLSJHtFRVIrc6Kl4YomwIPwhHKF5IHw+wv8ClYGFz+JhobPM+Z6d6fAuQ8vFOLubxeURGejh12MIYxwK1t/SwuOOMo9v4VbH7mnTLl0JOElYI/XfyUc9HSDJP8MnYz9E8R/YOf/E6RcHXUDAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5917fe46c34fda10c07d190ed40131c8</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>d87dc38a-c86d-4c1f-a039-4ab59122fe91</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>aff7f2c6c34fda10c07d190ed4013144</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:08</sys_updated_on>
+        <ui_id>7e121018-168b-408f-9136-35446741b2d4</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e5f06ecac3cbda10c07d190ed40131dc</block>
+        <comment/>
+        <connected_to>b7cf0d86-f4dc-462c-b648-c18637f95b96</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Creating a suggested film ">6ff7f2c6c34fda10c07d190ed4013125</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>eff7f2c6c34fda10c07d190ed4013146</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:08</sys_updated_on>
+        <ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</ui_id>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K8jPaZSka0f7NnWahDSYxKa9wBTdOE5rcOzgj3Yl6n/nOk7Sig0Boo+8RPGx7/U5J/coLVHONs6aB3VlDF9Lsvz0FBEuPYbvLZFQM7IkVMmSW65k3gER2YJwfgNfS24aAfvHI0I3XJSa9d0a0FhjmSbL9qctXmJBlUCVLmhKp9l8miVJ9vYiLebTIs3KKTDIsKGAggk8uhpovLntkOiX/Oy+8bixmst1v77tu9wPoNKlZ5UmEWHPlsmSIZ8KhGERqUGWYJXej4hmUN5JcQQ2XNoguIZnw7/jhdls5g9WDCXS3o1xmfdOBbi6BgtIxVHr9Gic4pSZYE7JKnDCrk6xcOCu8VJDiYVCDNVKuFp+CI6QscHJh3EGSbDGK/XUex3V/UbtPg4sb7jsXOk3haIgxhVY9K5w1vNpCROsxkZ5DU2DjuaNVlveFSOXOl4LXMSVUDu81E9XDNQTj9FYiG8Qv+7gR9Dcq3iPbbA40CzAcJp3k4jt0CZGDhExe7MSYMxRJLqbf3OeYpDci8uDP76Eat7YK7x5y3odh+jlYJ/MdNumtKhmtFhMMgaXkwtY0MkimePyMk0zWOATqhjZol4QubFg2eHw2SXJFGf7C6MWB+lFMM7V9qzpSl9L1yu5+stIZb+JlP+ef5ioJEn+R+qfI8VNHoLQa+suP2Oinnx8wp2j15QbpPbgsXfDH8Vv7HG4OD2Fdkp/9aKO2OEHtFaBTZsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_6ff7f2c6c34fda10c07d190ed4013125^sys_idNOT IN67f7f2c6c34fda10c07d190ed401313c,a7f7f2c6c34fda10c07d190ed4013135"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6ff7f2c6c34fda10c07d190ed4013125</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>67f7f2c6c34fda10c07d190ed401313c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:18:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6ff7f2c6c34fda10c07d190ed4013125</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:56</sys_created_on>
+        <sys_id>a7f7f2c6c34fda10c07d190ed4013135</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:18:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_6ff7f2c6c34fda10c07d190ed4013125"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>38de920ac3cbda10c07d190ed40131f7</sys_id>
+        <latest_snapshot>6ff7f2c6c34fda10c07d190ed4013125</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch4-11-22-2024_12-02-2024_1408.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=38de920ac3cbda10c07d190ed40131f7^sys_idNOT IN37f7f2c6c34fda10c07d190ed401317e"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"37f7f2c6c34fda10c07d190ed401317e","name":"plan","plan_signature":null}}</plan>
+        <plan_id>38de920ac3cbda10c07d190ed40131f7</plan_id>
+        <snapshot>ac0cf64ec34fda10c07d190ed4013133</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:18:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>37f7f2c6c34fda10c07d190ed401317e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:34:09</sys_updated_on>
+        <trigger display_value="">b7f7f2c6c34fda10c07d190ed401317c</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=38de920ac3cbda10c07d190ed40131f7"/>
+</record_update>

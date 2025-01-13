@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="05cdbecec34fda10c07d190ed401316a" sys_domain="global" table="x_1593670_raas_media" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-13 22:44:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ddcdbecec34fda10c07d190ed401316d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1593670_raas_media" name="x_1593670_raas_media" sys_domain="global" view="c1cd7ecec34fda10c07d190ed4013168">05cdbecec34fda10c07d190ed401316a</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_1593670_raas_media" sys_domain="global" view="c1cd7ecec34fda10c07d190ed4013168">49cdbecec34fda10c07d190ed4013166</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-13 22:44:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-13 22:44:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1dcdbecec34fda10c07d190ed401316e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1593670_raas_media" name="x_1593670_raas_media" sys_domain="global" view="c1cd7ecec34fda10c07d190ed4013168">05cdbecec34fda10c07d190ed401316a</sys_ui_form>
+            <sys_ui_section caption="Ratings" display_value="Ratings" name="x_1593670_raas_media" sys_domain="global" view="c1cd7ecec34fda10c07d190ed4013168">41cdbecec34fda10c07d190ed4013168</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-13 22:44:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-13 22:44:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>11cdbecec34fda10c07d190ed4013198</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1593670_raas_media" name="x_1593670_raas_media" sys_domain="global" view="c1cd7ecec34fda10c07d190ed4013168">05cdbecec34fda10c07d190ed401316a</sys_ui_form>
+            <sys_ui_section caption="Language" display_value="Language" name="x_1593670_raas_media" sys_domain="global" view="c1cd7ecec34fda10c07d190ed4013168">8dcdbecec34fda10c07d190ed4013168</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-13 22:44:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-13 22:44:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1dcdbecec34fda10c07d190ed401319b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1593670_raas_media" name="x_1593670_raas_media" sys_domain="global" view="c1cd7ecec34fda10c07d190ed4013168">05cdbecec34fda10c07d190ed401316a</sys_ui_form>
+            <sys_ui_section caption="Integration" display_value="Integration" name="x_1593670_raas_media" sys_domain="global" view="c1cd7ecec34fda10c07d190ed4013168">89cdbecec34fda10c07d190ed4013169</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-13 22:44:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_1593670_raas_media</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-13 22:44:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>05cdbecec34fda10c07d190ed401316a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1593670_raas_media</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+            <sys_update_name>sys_ui_form_sections_05cdbecec34fda10c07d190ed401316a</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-13 22:44:10</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view Copy" name="Default_view_Copy">c1cd7ecec34fda10c07d190ed4013168</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

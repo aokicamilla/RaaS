@@ -3,6 +3,13 @@
         <element label="Release Year" max_length="4" name="release_year" type="string"/>
         <element label="media" max_length="32" name="media" reference="x_1593670_raas_media" type="reference"/>
         <element label="Title" max_length="250" name="title" type="string"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Series" sequence="20" value="series"/>
+                <element inactive="true" inactive_on_update="true" label="Episode" sequence="30" value="episode"/>
+                <element inactive_on_update="false" label="Movie" sequence="10" value="movie"/>
+            </choice>
+        </element>
         <element label="Reproval Reason" max_length="4000" name="reprove_reason" type="string"/>
     </element>
 </database>
