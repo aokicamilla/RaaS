@@ -8,13 +8,13 @@
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Show error message</name>
+        <name>Show error message that movie not found</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
    if (newValue ==='') {
       return;
    }
-    if (newValue == '4' || newValue == '7') {
+    if (newValue == '4' || newValue == '7' || newValue == '8') {
 		//ou g_form.getValue('integration_status')=='7'
 		var errorMessage = g_form.getValue("integration_error_message");
 		g_form.addErrorMessage(errorMessage);
@@ -28,15 +28,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>da93ee09c38f9610c07d190ed4013104</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Show error message</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Show error message that movie not found</sys_name>
         <sys_overrides/>
         <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
         <sys_policy/>
         <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
         <sys_update_name>sys_script_client_da93ee09c38f9610c07d190ed4013104</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-10 21:15:36</sys_updated_on>
+        <sys_updated_on>2025-01-11 17:31:34</sys_updated_on>
         <table>x_1593670_raas_media</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

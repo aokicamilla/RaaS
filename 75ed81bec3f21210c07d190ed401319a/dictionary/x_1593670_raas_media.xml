@@ -31,6 +31,7 @@
                 <element inactive_on_update="false" label="Media not Found" sequence="500" value="7"/>
                 <element inactive_on_update="false" label="Integrating" sequence="200" value="2"/>
                 <element inactive_on_update="false" label="Starting" sequence="100" value="1"/>
+                <element inactive_on_update="false" label="Media already exists" sequence="600" value="8"/>
                 <element inactive_on_update="false" label="Integration Success" sequence="400" value="3"/>
                 <element inactive_on_update="false" label="Integrating Failure" sequence="300" value="4"/>
             </choice>
