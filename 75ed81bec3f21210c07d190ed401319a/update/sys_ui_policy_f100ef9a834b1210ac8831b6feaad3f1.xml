@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_1593670_raas_media">release_dateISNOTEMPTY^EQ<item endquery="false" field="release_date" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        <conditions table="x_1593670_raas_media">productionISEMPTY^EQ<item endquery="false" field="production" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <description/>
@@ -21,22 +21,22 @@
 
 }]]></script_true>
         <set_values/>
-        <short_description>Show release date or year</short_description>
+        <short_description>Don't show the production when the field is empty</short_description>
         <sys_class_name>sys_ui_policy</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-09 16:44:00</sys_created_on>
+        <sys_created_on>2025-01-14 19:52:19</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>93c40134c3075610c07d190ed4013190</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Show release date or year</sys_name>
+        <sys_id>f100ef9a834b1210ac8831b6feaad3f1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Don't show the production when the field is empty</sys_name>
         <sys_overrides/>
         <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
         <sys_policy/>
         <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
-        <sys_update_name>sys_ui_policy_93c40134c3075610c07d190ed4013190</sys_update_name>
+        <sys_update_name>sys_ui_policy_f100ef9a834b1210ac8831b6feaad3f1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-14 19:57:35</sys_updated_on>
+        <sys_updated_on>2025-01-14 19:52:54</sys_updated_on>
         <table>x_1593670_raas_media</table>
         <ui_type>0</ui_type>
         <view/>

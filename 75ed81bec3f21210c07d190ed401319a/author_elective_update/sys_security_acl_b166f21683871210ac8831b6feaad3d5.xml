@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>deny</decision_type>
+        <description>Deny list_edit for records in sysapproval_approver, unless users have the role admin.</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>sysapproval_approver</name>
+        <operation display_value="list_edit">54f535270a0a0b8c007c67009ab2bdc0</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 16:53:52</sys_created_on>
+        <sys_id>b166f21683871210ac8831b6feaad3d5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>sysapproval_approver</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>sys_security_acl_b166f21683871210ac8831b6feaad3d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 18:31:28</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</application>
+        <file_path/>
+        <instance_id>c81c45981b154a507d9d2f8dee4bcb8a</instance_id>
+        <instance_name>dev250676</instance_name>
+        <name>sys_security_acl_b166f21683871210ac8831b6feaad3d5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><decision_type>deny</decision_type><description>Deny list_edit for records in sysapproval_approver, unless users have the role admin.</description><local_or_existing>Local</local_or_existing><name>sysapproval_approver</name><operation display_value="list_edit">54f535270a0a0b8c007c67009ab2bdc0</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-14 16:53:52</sys_created_on><sys_id>b166f21683871210ac8831b6feaad3d5</sys_id><sys_mod_count>4</sys_mod_count><sys_name>sysapproval_approver</sys_name><sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package><sys_policy>read</sys_policy><sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope><sys_update_name>sys_security_acl_b166f21683871210ac8831b6feaad3d5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-14 18:31:28</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-847285373</payload_hash>
+        <record_name>sysapproval_approver</record_name>
+        <reverted_from/>
+        <source>fbfa3d5e83031210ac8831b6feaad3c9</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 18:31:29</sys_created_on>
+        <sys_id>ad8d4792830b1210ac8831b6feaad334</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1946615c0540000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 18:31:29</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>658d47926a0b1210b6a6909e5b269134</update_guid>
+        <update_guid_history>658d47926a0b1210b6a6909e5b269134:-847285373,6d3d4f52a70b121098a631f99fd205ea:-1980995761,4688fe96a087121057622338787bafe2:-847285373,26877a56da8712109bfcd752f07339ea:-134219501,ff27b256308712105e92c4fdb9120cac:-1386269285</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 18:44:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>0cccad750a8747e5836c06966ef29279</sys_id>
+        <sys_metadata>b166f21683871210ac8831b6feaad3d5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sysapproval_approver</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_parent display_value="sysapproval_approver">6f49564b659012104f340572a9474089</sys_parent>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_scope_delete display_value="">3c9b869725a94870a23fdfd2e4524fb1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_b166f21683871210ac8831b6feaad3d5</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_b166f21683871210ac8831b6feaad3d5">ad8d4792830b1210ac8831b6feaad334</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 18:44:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

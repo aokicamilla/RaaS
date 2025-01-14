@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description/>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1593670_raas_media</name>
+        <operation display_value="create">create</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 19:28:48</sys_created_on>
+        <sys_id>187ad392834b1210ac8831b6feaad38f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1593670_raas_media</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>sys_security_acl_187ad392834b1210ac8831b6feaad38f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 19:28:48</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</application>
+        <file_path/>
+        <instance_id>c81c45981b154a507d9d2f8dee4bcb8a</instance_id>
+        <instance_name>dev250676</instance_name>
+        <name>sys_security_acl_187ad392834b1210ac8831b6feaad38f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><decision_type>allow</decision_type><description/><local_or_existing>Local</local_or_existing><name>x_1593670_raas_media</name><operation display_value="create">create</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-14 19:28:48</sys_created_on><sys_id>187ad392834b1210ac8831b6feaad38f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1593670_raas_media</sys_name><sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package><sys_policy/><sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope><sys_update_name>sys_security_acl_187ad392834b1210ac8831b6feaad38f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-14 19:28:48</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>1446581056</payload_hash>
+        <record_name>x_1593670_raas_media</record_name>
+        <reverted_from/>
+        <source>fbfa3d5e83031210ac8831b6feaad3c9</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 19:28:48</sys_created_on>
+        <sys_id>99aa5bd2834b1210ac8831b6feaad3eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194664a3d0f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 19:28:48</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>9daa5bd2204b1210982feffc8b915cea</update_guid>
+        <update_guid_history>9daa5bd2204b1210982feffc8b915cea:1446581056</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 19:29:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>1498d1525d9942b0876d8deeef571900</sys_id>
+        <sys_metadata>187ad392834b1210ac8831b6feaad38f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1593670_raas_media</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_parent display_value="x_1593670_raas_media">36bafd9e83031210ac8831b6feaad33d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_scope_delete display_value="">3c9b869725a94870a23fdfd2e4524fb1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_187ad392834b1210ac8831b6feaad38f</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_187ad392834b1210ac8831b6feaad38f">99aa5bd2834b1210ac8831b6feaad3eb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 19:29:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

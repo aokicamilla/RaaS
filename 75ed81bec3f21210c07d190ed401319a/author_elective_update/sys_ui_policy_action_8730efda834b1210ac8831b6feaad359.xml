@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>production</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 19:53:19</sys_created_on>
+        <sys_id>8730efda834b1210ac8831b6feaad359</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>production</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>sys_ui_policy_action_8730efda834b1210ac8831b6feaad359</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 19:53:19</sys_updated_on>
+        <table>x_1593670_raas_media</table>
+        <ui_policy display_value="Don't show the production when the field is empty">f100ef9a834b1210ac8831b6feaad3f1</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=8730efda834b1210ac8831b6feaad359"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</application>
+        <file_path/>
+        <instance_id>c81c45981b154a507d9d2f8dee4bcb8a</instance_id>
+        <instance_name>dev250676</instance_name>
+        <name>sys_ui_policy_action_8730efda834b1210ac8831b6feaad359</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>production</field><field_message/><field_message_type>none</field_message_type><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-14 19:53:19</sys_created_on><sys_id>8730efda834b1210ac8831b6feaad359</sys_id><sys_mod_count>0</sys_mod_count><sys_name>production</sys_name><sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package><sys_policy/><sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope><sys_update_name>sys_ui_policy_action_8730efda834b1210ac8831b6feaad359</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-14 19:53:19</sys_updated_on><table>x_1593670_raas_media</table><ui_policy display_value="Don't show the production when the field is empty">f100ef9a834b1210ac8831b6feaad3f1</ui_policy><value/><value_action>ignore</value_action><visible>false</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=8730efda834b1210ac8831b6feaad359"/></record_update>]]></payload>
+        <payload_hash>68577574</payload_hash>
+        <record_name>production</record_name>
+        <reverted_from/>
+        <source>fbfa3d5e83031210ac8831b6feaad3c9</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 19:53:20</sys_created_on>
+        <sys_id>a840231e834b1210ac8831b6feaad30f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1946660af7e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 19:53:20</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>ac40231ece4b121005debdff1325590e</update_guid>
+        <update_guid_history>ac40231ece4b121005debdff1325590e:68577574</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 19:55:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>79d400318897466b9bc43f6e3b1ab8f1</sys_id>
+        <sys_metadata>8730efda834b1210ac8831b6feaad359</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>production</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_parent display_value="Don't show the production when the field is empty">f100ef9a834b1210ac8831b6feaad3f1</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_scope_delete display_value="">3c9b869725a94870a23fdfd2e4524fb1</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_8730efda834b1210ac8831b6feaad359</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_8730efda834b1210ac8831b6feaad359">a840231e834b1210ac8831b6feaad30f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 19:55:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
