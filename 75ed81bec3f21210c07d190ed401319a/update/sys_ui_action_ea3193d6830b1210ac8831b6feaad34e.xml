@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>conclude</action_name>
+        <action_name>complete</action_name>
         <active>true</active>
         <client>false</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
@@ -27,11 +27,10 @@
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
         <messages/>
-        <name>Conclude</name>
+        <name>Complete</name>
         <onclick>conclude()</onclick>
         <order>200</order>
-        <script><![CDATA[
-current.setValue("state", "3")
+        <script><![CDATA[current.setValue("state", "3")
 current.update();
 action.setRedirectURL(current)]]></script>
         <show_insert>false</show_insert>
@@ -44,15 +43,15 @@ action.setRedirectURL(current)]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ea3193d6830b1210ac8831b6feaad34e</sys_id>
-        <sys_mod_count>16</sys_mod_count>
-        <sys_name>Conclude</sys_name>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Complete</sys_name>
         <sys_overrides/>
         <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
         <sys_policy/>
         <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
         <sys_update_name>sys_ui_action_ea3193d6830b1210ac8831b6feaad34e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-14 23:19:34</sys_updated_on>
+        <sys_updated_on>2025-01-15 18:26:17</sys_updated_on>
         <table>x_1593670_raas_media</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

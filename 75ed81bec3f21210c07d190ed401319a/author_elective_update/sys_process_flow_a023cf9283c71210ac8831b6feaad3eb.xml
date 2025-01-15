@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+    <sys_process_flow action="DELETE">
+        <active>true</active>
+        <condition table="x_1593670_raas_media">integration_state=2^EQ<item display_value="Integrating" endquery="false" field="integration_state" goto="false" newquery="false" operator="=" or="false" value="2"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <label>Integrating</label>
+        <name>Integrating</name>
+        <order>200</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 17:46:31</sys_created_on>
+        <sys_id>a023cf9283c71210ac8831b6feaad3eb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Integrating</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>sys_process_flow_a023cf9283c71210ac8831b6feaad3eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 17:55:59</sys_updated_on>
+        <table>x_1593670_raas_media</table>
+    </sys_process_flow>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</application>
+        <file_path/>
+        <instance_id>408484101bad86d87d9d2f8dee4bcbb8</instance_id>
+        <instance_name>dev259545</instance_name>
+        <name>sys_process_flow_a023cf9283c71210ac8831b6feaad3eb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+    <sys_process_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1593670_raas_media">integration_state=2^EQ<item display_value="Integrating" endquery="false" field="integration_state" goto="false" newquery="false" operator="=" or="false" value="2"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <label>Integrating</label>
+        <name>Integrating</name>
+        <order>200</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 17:46:31</sys_created_on>
+        <sys_id>a023cf9283c71210ac8831b6feaad3eb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Integrating</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>sys_process_flow_a023cf9283c71210ac8831b6feaad3eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 17:55:59</sys_updated_on>
+        <table>x_1593670_raas_media</table>
+    </sys_process_flow>
+</record_update>]]></payload>
+        <payload_hash>-1942836984</payload_hash>
+        <record_name>Integrating</record_name>
+        <reverted_from/>
+        <source>835e8c22c3431210c07d190ed401311a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 23:14:58</sys_created_on>
+        <sys_id>c26e8062c3431210c07d190ed4013181</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1946719495f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 23:14:58</sys_updated_on>
+        <type>Flow Formatter</type>
+        <update_guid>826e8062ea431210b7301939093b5b81</update_guid>
+        <update_guid_history>826e8062ea431210b7301939093b5b81:-1942836984</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-15 17:01:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_process_flow">sys_process_flow</sys_db_object>
+        <sys_id>4f3a4658c40f41e582c087469cba6bf9</sys_id>
+        <sys_metadata>a023cf9283c71210ac8831b6feaad3eb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Integrating</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_scope_delete display_value="">3c9b869725a94870a23fdfd2e4524fb1</sys_scope_delete>
+        <sys_update_name>sys_process_flow_a023cf9283c71210ac8831b6feaad3eb</sys_update_name>
+        <sys_update_version display_value="sys_process_flow_a023cf9283c71210ac8831b6feaad3eb">c26e8062c3431210c07d190ed4013181</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-15 17:01:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
