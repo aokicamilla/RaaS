@@ -30,9 +30,47 @@
         <name>Complete</name>
         <onclick>conclude()</onclick>
         <order>200</order>
-        <script><![CDATA[current.setValue("state", "3")
+        <script><![CDATA[current.setValue("state", "3");
 current.update();
-action.setRedirectURL(current)]]></script>
+action.setRedirectURL(current);
+
+var grMedia = new GlideRecord("x_1593670_raas_media");
+grMedia.addEncodedQuery("title=" + current.getValue("title") + "^type=" + current.getValue("type") + "^release_year=" + current.getValue("release_year") + "^sys_id!=" + current.getValue("sys_id"));
+grMedia.query();
+while(grMedia.next()) {
+grMedia.setValue("state", "7");
+grMedia.setValue("genre", "");
+grMedia.setValue("release_date", "");
+grMedia.setValue("category", "");
+grMedia.setValue("synopsis", "");
+grMedia.setValue("writers", "");
+grMedia.setValue("production", "");
+grMedia.setValue("poster", "");
+grMedia.setValue("website", "");
+grMedia.setValue("average_rating", "0");
+grMedia.setValue("imdb_rating", "0");
+grMedia.setValue("metascore", "0");
+grMedia.setValue("awards", "");
+grMedia.setValue("language", "");
+grMedia.setValue("country", "");
+grMedia.setValue("integration_state", "1");
+grMedia.setValue("integration_error_message", "");
+
+var grMediaActor = new GlideRecord("x_1593670_raas_m2m_actor_media");
+grMediaActor.addEncodedQuery("x_1593670_raas_media=" + grMedia.getValue("sys_id"));
+grMediaActor.query();
+grMediaActor.deleteMultiple();
+
+var grMediaDirector = new GlideRecord("x_1593670_raas_m2m_director_media");
+grMediaDirector.addEncodedQuery("x_1593670_raas_media=" + grMedia.getValue("sys_id"));
+grMediaDirector.query();
+grMediaDirector.deleteMultiple();
+
+grMedia.update();
+
+}
+
+action.setRedirectURL(current);]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -43,7 +81,7 @@ action.setRedirectURL(current)]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ea3193d6830b1210ac8831b6feaad34e</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>Complete</sys_name>
         <sys_overrides/>
         <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
@@ -51,7 +89,7 @@ action.setRedirectURL(current)]]></script>
         <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
         <sys_update_name>sys_ui_action_ea3193d6830b1210ac8831b6feaad34e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-15 18:26:17</sys_updated_on>
+        <sys_updated_on>2025-01-15 21:04:07</sys_updated_on>
         <table>x_1593670_raas_media</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
