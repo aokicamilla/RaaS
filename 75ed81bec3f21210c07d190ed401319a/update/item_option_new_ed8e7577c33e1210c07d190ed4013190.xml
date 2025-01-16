@@ -44,7 +44,7 @@
         <mask_use_encryption>false</mask_use_encryption>
         <name>media</name>
         <not_available_conversation>false</not_available_conversation>
-        <order/>
+        <order>100</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
@@ -58,20 +58,7 @@
         <record/>
         <record_producer_table>x_1593670_raas_review</record_producer_table>
         <reference>x_1593670_raas_media</reference>
-        <reference_qual>var grMedia = new GlideRecord("x_1593670_raas_media");&#13;
-grMedia.addEncodedQuery("state=" + "3"); &#13;
-grMedia.query();&#13;
-&#13;
-// Create an array to store the sys_ids&#13;
-var sys_ids = [];&#13;
-&#13;
-// Loop through the records&#13;
-while (grMedia.next()) {&#13;
-  sys_ids.push(grMedia.sys_id);&#13;
-}&#13;
-&#13;
-// Return the sys_ids as a string for the reference qualifier&#13;
-return 'sys_idIN' + GlideFilter.encodeSysID(sys_ids.join(',')); </reference_qual>
+        <reference_qual>javascript:new x_1593670_raas.RaaSUtils().referenceQualifierMedia()</reference_qual>
         <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
@@ -92,14 +79,14 @@ return 'sys_idIN' + GlideFilter.encodeSysID(sys_ids.join(',')); </reference_qual
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-06 18:23:32</sys_created_on>
         <sys_id>ed8e7577c33e1210c07d190ed4013190</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Movie/Tv Show/ Episode</sys_name>
         <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
         <sys_policy/>
         <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
         <sys_update_name>item_option_new_ed8e7577c33e1210c07d190ed4013190</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-16 17:43:18</sys_updated_on>
+        <sys_updated_on>2025-01-16 19:56:43</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

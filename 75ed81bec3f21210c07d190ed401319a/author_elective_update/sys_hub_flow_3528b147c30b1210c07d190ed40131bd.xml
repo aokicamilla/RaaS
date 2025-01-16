@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=72612000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-xanadu-07-02-2024__patch4-11-22-2024_12-02-2024_1408.zip</compiler_build>
+        <copied_from>38de920ac3cbda10c07d190ed40131f7</copied_from>
+        <copied_from_name>Suggestion lifecycle</copied_from_name>
+        <description>this flow create an approved media suuuggestion in the media table</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>copy_of_suggestion_lifecycle</internal_name>
+        <label_cache>[{"name":"{{static.5f2c319283431210ac8831b6feaad35a}}","label":"Raas Administrator","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"1cbf5cb9-2ea7-4a9c-9069-27112a9711af":["approval_conditions"]}},{"name":"Created_1.current.release_year","label":"Trigger - Record Created➛Suggestion Record➛Release Year","reference":"","reference_display":"Release Year","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"release_year","usedInstances":{"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"dcd97419-ac1b-4587-8e03-584b949d7897.__action_status__.code","label":"1 - Look Up Records➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{},"attributes":{}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.title","label":"6 - Update Record➛Suggestion Record➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"title","usedInstances":{"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Suggestion Record","reference":"x_1593670_raas_suggestion","reference_display":"Suggestion","type":"reference","base_type":"reference","usedInstances":{"d336421e-6c38-433c-876e-a1cbc43dfebb":["record"],"1cbf5cb9-2ea7-4a9c-9069-27112a9711af":["record"],"ce2dcca6-4fbc-400a-a095-578a0e439d58":["record"],"de64e908-9d2f-4ac4-97eb-6c4c9630f4ed":["record"],"9012435e-7f0d-4ff2-b01f-8ef0631a94db":["conditions"],"c9c70bf4-78a8-4e3e-a8f3-f11f425e431b":["record"],"2c3acba9-996e-48ca-8077-0ab2bf2359ff":["record"],"dc5d64d0-1504-4e16-b466-836481c502e3":["conditions"],"ecfae454-20ee-4386-82a1-3d55486b0629":["record"],"1d6c5a67-4aa7-4758-ac5e-3e927ff84abf":["record"],"2f42358f-12d2-41d9-b965-43ea54998370":["record"]},"attributes":{}},{"name":"{{static.899735a6c37a1210380d5f73e4013163}}","label":"RaaS Administrators","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"1cbf5cb9-2ea7-4a9c-9069-27112a9711af":["approval_conditions"]}},{"name":"1cbf5cb9-2ea7-4a9c-9069-27112a9711af.approval_state","label":"7 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"b7cf0d86-f4dc-462c-b648-c18637f95b96":["condition"],"99b04fa9-a601-45eb-9e31-8d5a2639768b":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.title","label":"Trigger - Record Created➛Suggestion Record➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"title","usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["title"],"8b462a41-47a3-4cdf-a7a5-1f70a295557a":["condition"],"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.type","label":"6 - Update Record➛Suggestion Record➛Type","reference":"","reference_display":"Type","type":"choice","base_type":"choice","parent_table_name":"x_1593670_raas_suggestion","column_name":"type","choices":[{"label":"-- None --","used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Movie","used":false,"reference":false,"image":"","rawLabel":"Movie","selected":false,"missing":false,"value":"movie","parameters":{"name":"x_1593670_raas_suggestion","dependent_values":[""]}},{"label":"Series","used":false,"reference":false,"image":"","rawLabel":"Series","selected":false,"missing":false,"value":"series","parameters":{"name":"x_1593670_raas_suggestion","dependent_values":[""]}}],"usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["type"]}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.release_year","label":"6 - Update Record➛Suggestion Record➛Release Year","reference":"","reference_display":"Release Year","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"release_year","usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["release_year"]}},{"name":"dcd97419-ac1b-4587-8e03-584b949d7897.Records","label":"1 - Look Up Records➛Media Records","reference":"x_1593670_raas_media","reference_display":"Media","type":"records","base_type":"records","usedInstances":{"afd1a81d-aa38-46b6-b1e4-755875bd3b57":["items"],"d87dc38a-c86d-4c1f-a039-4ab59122fe91":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record","label":"6 - Update Record➛Suggestion Record","reference":"x_1593670_raas_suggestion","reference_display":"Suggestion","type":"reference","base_type":"reference","usedInstances":{"ce2dcca6-4fbc-400a-a095-578a0e439d58":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Suggestion Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1593670_raas_suggestion","column_name":"sys_id","usedInstances":{"82cc6521-036c-4645-bfb6-f2737fa1e446":["conditions"]}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Copy of Suggestion lifecycle</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3528b147c30b1210c07d190ed40131bd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Copy of Suggestion lifecycle</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>sys_hub_flow_3528b147c30b1210c07d190ed40131bd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:57</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=3528b147c30b1210c07d190ed40131bd"/>
+    <sys_variable_value action="DELETE" query="document_key=3528b147c30b1210c07d190ed40131bd"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=3528b147c30b1210c07d190ed40131bd"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=3528b147c30b1210c07d190ed40131bd^sys_idNOT IN7128b147c30b1210c07d190ed40131c0"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>3528b147c30b1210c07d190ed40131bd</id>
+        <name>Copy of Suggestion lifecycle</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>7128b147c30b1210c07d190ed40131c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=7128b147c30b1210c07d190ed40131c0"/>
+    <sys_hub_flow_input action="DELETE" query="model=3528b147c30b1210c07d190ed40131bd^sys_idNOT IN3d28b147c30b1210c07d190ed40131dc,fd28b147c30b1210c07d190ed40131c6"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</model>
+        <model_id>3528b147c30b1210c07d190ed40131bd</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>3d28b147c30b1210c07d190ed40131dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=3d28b147c30b1210c07d190ed40131dc"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</model>
+        <model_id>3528b147c30b1210c07d190ed40131bd</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>fd28b147c30b1210c07d190ed40131c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=fd28b147c30b1210c07d190ed40131c6"/>
+    <sys_hub_flow_output action="DELETE" query="model=3528b147c30b1210c07d190ed40131bd"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=3528b147c30b1210c07d190ed40131bd"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=3528b147c30b1210c07d190ed40131bd^sys_idNOT IN8228f147c30b1210c07d190ed4013126"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:57</sys_created_on>
+        <sys_id>8228f147c30b1210c07d190ed4013126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:57</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuvgS522bZNEA2w1qp+1DkAqUNLSJ0pQrUsp6F/n3DnWxZV0c37LJvgQwSXHOHJ45Q+bhm8mJD9y8NO+Jz8HsmUwoiAXh96sl4LDSw54gCz23ICIkKopX5qWKE+iZURxCbF7aPTMlPIHpSt6G+BEuzb4oPjeLafz9xbMHY3c4sryYEOnJZDYDqVgkcE3I5JKT1V/F0ml1LpgzHsYgzMuHx565JDFur3Tob7UppuMHNCBjB6zAtV3HsSznom/7Q9e3ndAlYFm4YT3tGl7Vkv0mWfiiQISAoSjhElqIiYGEd4Kv1ivmyGvOzIJ8kewr7n5h6XUUEHsA+Vwwj1gAd8ss62wkB5RPRjxZiM85UM0XUJJwVfKFI4kEL4SlxqajFaHpdB49TcpAH5nI0igmeRQQvv5FlIqZnyiQmlnKOHLs5STIKIkzmJObq7vJtff3h/ur324m3uRmej+5vbq/uTafs3y8/xK9Y46wwOLl6TyvD/kjA65PSiQLH9H0TBnEbKk+BIqlUMB57m3UeRWJkBVaqCk0KKfktkKLlMpTs6xOkQaVzUuh/nPzR1OS+eBhWhwOCQmBdGjRpxUtVpNsgaZa8q1mt0uVxcg+suxb1msLM6+Ro3W5iELg15vtTJxEr4g9JpaJ0rQ8EaGkpyKPhKFXIUwvRUwvCTXP7flFVcaJwA+8NfFNbWa0rfn7xCTCfcDKKrnJtsR5+qnYcpIII8ITwj9GkMRIjTJKU6K3CzIrGKVT4BCoymnTP2X11+9MSiZmFdTroBkHjZjrcKgao0wpjy1PDP54ZGE2+U1rvNUK9ODqtG1KfaCONdK1aVuuT21rZA0IDV3LCpxKdTbBdKJUtdN/lSrtqFGZCYzvIac6lwVKq6rwvaSRbuuqzFYfe2EFV+eBZp8JmqOh1SzNPcjT1vrLh6+3ZbgrtTP3aBKmBL8I97W2PV2N8ugJ7fQIR/NJ8O8sjhIR1i1G72kwYWxWGD8V/P18RnejUQy7AWyveCNf2zBcapSI1RkczaW2P4Y+WGhkLnqYPxiP/YA4lI6GI3DsmqNtYLRie19O9oKC0jYJdrlaqxjSNg0d4GcnAGx428EAT3e1QoGtnpbP/Rju9TQH4SHU2OPanxomNuMshHLu6ApuREk3NXtqFdOLcTCwR6NghC8GrGLaB5/YfWdAxqOhezGoVXEDyi6YqoWE7/KOkCuZAXl3D93XlKEEpXTLOLyTCrxUZt+QPEilm2nujcwkotj4HIlfbjfrjClgk8pejOdqqfugwM1i43Vh+JGaN3o6hv4Vx7dC67tgBytv+ZSp6SHdTuvkpwz0LwZj6rZbBh23WcYGTDfM93MF2FP1aWf9tN0F9hVx2loLnc37CFnW9FDt6juuHecixT47Kc7rkeKefNUpi67z/XYM2B+oLWUXglN6k44JXkSrhnwdGThhYBCDUaP4rxw+x/2VoeaAlHK802JAQ0c/1YmrnaEJZa3g7wskvyU3OhQOG8XN502bT+3Uz/vyhHBEBgO34846rr882wC9gPf9tKKDlZ62Fc7OfnTYvvU9WztSRYbbR79nrzlr1u0N57SsW1vOS1mf3kx2vZtbULzTNvH4P7QnrkMOHgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=3528b147c30b1210c07d190ed40131bd^sys_idNOT IN0a28f147c30b1210c07d190ed4013123,4a28f147c30b1210c07d190ed4013120,7128f147c30b1210c07d190ed4013120,8228f147c30b1210c07d190ed4013125,8a28f147c30b1210c07d190ed4013121,8a28f147c30b1210c07d190ed4013124,b128f147c30b1210c07d190ed401311f,c628f147c30b1210c07d190ed4013122,ca28f147c30b1210c07d190ed4013125,ce28f147c30b1210c07d190ed4013122,f528f147c30b1210c07d190ed401311d"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>0a28f147c30b1210c07d190ed4013123</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>ecfae454-20ee-4386-82a1-3d55486b0629</ui_id>
+        <values>H4sIAAAAAAAA/9WWyW7bMBCGXyXQ2TJESbbk3IoYAQqkKZCkvRSBMCKHDgFqCUW5SY28e4eSvCVulrYp0COH2z//zCfq28pTwjv2YpEKMZMskIyxgAUTFrIUU8x5Mk0wTL2RV0KBtNIgr4yg8RJ06wKr1YlBsCgyNuatMVjahweaF6qpNdx/HZZRhN8oLWjeO/52PfJqMHSiReMdrx5NvVaShhw1Lb1Ya3qs0d7Xbiwq3hakK1Pr4Nmwcz7MHH2c0wxtcnLYyMM7i6VA0iFBNzjyCigF2MrcbyKUtPhc6m3gRpW2T7SAu0b9oJuj0K2TSJnxwYTNMBsM6sNyDhYurWm5bc3Gr0pxbHpPBEpotT3ZjfULPtdWVWW/xUKu17sr3Rblee+Itzlgpx5tQyKwdok65XQ5ZSEvb6rvF2uRp6rsLBlS1BUHvRmBtUblrXVyVl6rrg653YcP+40au4UF1LUqF1ltqqXq7iP1xXihaTCWuvpOMhu1KMfAXapjqgSMTyk+78JfwSiX9yc6hja7O7+U6rbFj66PBAuSaBZwPwknkR8HHPw8FbkPeSgncTxNpznzHkZec9+caGiarWNUquy2dQn3/g1OZZ3ZndNZ13BuMzeqth9I3hIHfx5GA1spe66Ro3Dbtztnbvm6y9hkFk2TIDMATda0iwU2XcWfMHa5O/c22l4hck3bVddjh0UPwD2Jne3uPTrvJwbcwjfi1vfpAdrS4D+ibUjrz3Hb83qftj23/wlsPM9zmePMZznnfpxg6qchJD5OAh7JMAqCRP4GbC8hFj/fvTvPV1lZJRWHAZI1ZDwIMWGTaRrFEe0NgKdpxPKpRAARxcFzrB19qJ2XKN7+xL0sew3d+b7uw9kM9G0Z2IfvYic+sBc9z16P2u+8dFRgXLr6YQFKZ30v/QLIR7n9ZTh/pWSPWJASufuHkQq1oKbLuj3v8mzKSwTDb07dTa6GPZ77dO8VlhinO57QvVvO94P76mlPNWizwZbMHZDJyhTgOqLL8PE3IZ4xTKIw9WfTkL4JGE38XESRz+gbgQgoQ/E+D/D1T6mvjyXeCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>4a28f147c30b1210c07d190ed4013120</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>d336421e-6c38-433c-876e-a1cbc43dfebb</ui_id>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9lcprFCUEGGBXgZBG6rRSGbHpVJFj34Al5zF+UBjEv89N4oQIqg6VukGTne/DPuf4XOflQAQnUzIA7geTYMTCIAz7vt8fD4J4FMZBn4cUICA9ktEUsFIByxXH9ZZKWwYOh5kCaoBHgcesUpCZ4xHzXOhC0v3KlWGEbYTkmCfTl9ceKajCHQ0oMj2cpa6FJGkMEkufG0znGM2+KNc8ZzZFXJFogg+uc+4yd9/nmMGmEk7g9wjsDGQcEEhCpYYeSWnGqcnVnkyNshhA0vwpk/u2YiMyUxNN6U6LP3jywC/rEkBmzInQLiMnUB1O5tTQJe7MjFWtXrlgoGtNOCTUSjPrxuqCp8KIPKtbDI1l051Lm2aPtSKk3aBzH1YjCChKniXymlay3ORvzw3IhcgqSRxFmTMq2xU1RonYmhLOgYCESuOUFoXI1lGh8q2omhFK6q0lLrxE5m94phbrzKOsxO2hqtRbYHxehVdUiZLED9wGm489ovd6JqnWJyqoYfTblkhqYo5CVKlQSRBVTiibmRKFucejtuCAH3vO9PHwI4exyclQnT1Pxt9FwXASjr75kaJUR9qu16Crq7gw/7Kb+9wYXAGyGYOf1eW/D9pNwkXsodt791gn3BwMv2wOxrc0B47GzQ/Cv+zv9z98YDtOqhyvO9bXBh/8X9b3Qz6+dPtZ9nN+vwJV4/eFAMn1OzAbs0OKsAxENewzw7vk3col28f/y1wfjPzquyHv/zf/gNe/JMHmufoIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>d87dc38a-c86d-4c1f-a039-4ab59122fe91</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>7128f147c30b1210c07d190ed4013120</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>2f42358f-12d2-41d9-b965-43ea54998370</ui_id>
+        <values>H4sIAAAAAAAA/9WW207cMBCGXwXlerOKk+wmy10FQkKiVALamwpFE3u8a8k51HG20BXv3nGSPcGWAi2Veunx6Z9/5ovzdeUp4R17sUiFmEkWSMZYwIIJC1mKKeY8mSYYpt7IK6FAWmmQV0bQeAm6dYHV6sQgWBQZG/PWGCztwwPNC9XUGu6/DMsowhdKC5r3jr/ejrwaDJ1o0XjHq0dTL5WkIUdNS6/Wmh5rtPe1G4uKtwXpytQ6eDHsPB1mjs5PaYY2OTls5OGdxVIg6ZCgGxx5BZQCbGXuNxFKWnwq9TawUKXtEy3grlE/6OYodOskUmZ8MGEzzAaD+rA8BQvX1rTctmbjV6U4Nr0nAiW02p7sxvoFn2qrqrLfYiHX692VbovysnfE2xywU4+2IRFYu0SdcrqcspDXi+r71VrkmSo7S4YUdcVBb0ZgrVF5a52cldeqm0Nu9+HDfqPGbmEBda3KeVabaqm6+0h9MZ5rGoylrr6TzEbNyzFwl+qYKgHjM4qfduEvYJTL+yMdQ5vdnZ9L9a3Fc9dHggVJNAu4n4STyI8DDn6eityHPJSTOJ6m05x5DyOvuW9ONDTN1jEqVfatdQn3/g1OZZ3ZndNZ13BuMzeqth9I3hIHfx5GA1spe66Ro3Dbtztnbvm6y9hkFk2TIDMATda08zk2XcWfMHa9O/c62l4gck3bTddjh0UPwD2JXezuPbrsJwbcwlfi1vfpAdrS4D+ibUjrz3Hb83qftj23/wlsPM9zmePMZznnfpxg6qchJD5OAh7JMAqCRL4Btt8hFj/fvTvPV1lZJRWHAZI1ZDwJUc7YNI3iiPYGwNM0YvlUIoCIIH6OtSODzksUr3/ifi97Dd3lvu7D2Qz0bRnYh+9qJz6wFz3PXo/aW146KjAuXf2wAKWzvpd+AeSj3P4ynL9SskcsSInc/cNIhVpQ02Xdnnd5NuU1guGLM3eTq2GP5z7de4UlxumOJ3TvlvP94L552lMN2mywJXMHZLIyBbiO6DJ8/E2IZwyTKEz92TSkbwJGEz8XUeQz+kYgAspQvM8DfPsT/bw0W94KAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:57</sys_created_on>
+        <sys_id>8228f147c30b1210c07d190ed4013125</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:57</sys_updated_on>
+        <ui_id>de64e908-9d2f-4ac4-97eb-6c4c9630f4ed</ui_id>
+        <values>H4sIAAAAAAAA/+VWXW/aMBT9KyhPVGJRApS27Gkqq7Spa6Uy9aV0lolvwJtjZ7ZDyxD/fdexoRl0XSv1pRov4PuVc07OTbhZRZxFw6gPLElP0kHWS3u9bpJ0j/vpdNCbpl3WowBp1IkkLQArNWRKMzwvqKhcYLU61UAtMJLGWaU1SLteY55xUwq6vA5lGMnmXDDMR8Ob205UUo0TLehouNpJPReSoFMQWHq1wbSL0S5Ld2YqqwrERfgmeB46RyHT+jTCDDY5OGnSieDegmSAQHIqDHSigkpGrdLLaGh1hQEkzS6lWG4r5lxaT7Sg94b/wiv3E1eXAzLLggjbIwkC+XA+opaOcXJmK73VS/EMjNeEQU4rYU+bMV9wWVqupG+xdCo23UpUhbzwikTbAY37URkEAaXj6ZB7Wvl4ru6uNiDPuKwlCRSFyqjYnqi1mk8r6+CsIhBQa1zQsuRyRkqtFrxuRihFPBN4iHOh7vCahs9kTDOHO0ZVaXyG8VEdvqaaOxJfcAw2rzuRWZpTQY15oIIakp+VQ+KJBQqkVqGWgNROcM2Z5qX9gJdaQAC+7gTTTw+fclh28mCoxswH49+T9PCkNzhKiKbUEFPNZmDqW7Fn/nEz97I1eAbIzRp8rW/+46DDJuzFzpu9rQufCHtw+Gp7cPyW9iDQePOL8C/7J90nH7ANJ9WONw3rG4sP/EmVJD3W/6bBMQSCRjBK+mjO3vlLA9vfhhd2v2xfnsFqsy9nHAQzj9DcLAsUCNsC8bR3FiYkW9chuX15vNrWpIOk/ryh3fkP3iGeoo85zH8a2EWeqkeT6ZZvoSL0tLzrWzkjNRGS9gkRSv0gVUn8f5k4fKEKTiATz8B+VpWWVHyUVi/b6cH7ifzL3J1wjIoX7YMYncNt29V0jyYT6X8c7E2JzZznto0Jl0Jnyb2B3xWXe4NQVUMXwLZmWa/Xt78BH/l5B3AKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>8a28f147c30b1210c07d190ed4013121</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>1cbf5cb9-2ea7-4a9c-9069-27112a9711af</ui_id>
+        <values>H4sIAAAAAAAA/+1XW2/aMBj9K8jPiCWE+1tV1GnT1kql6kupIuM44Mokme20ZRH/fV9s51JoKWy8sPbR38U53+EcG99liAVohPqDsE2Hw7Yzcx3Hc5xBlzgDj868fq/vYeKgJorwkkKloCQWAawfMU/zQJadC4oVDXy3RVIhaKTWa8gHTCYcr25tGUTIgvEA8mh0d99ECRawo6ICjbKN1L6QOJ5RDqXXBaZNjGqV5OsgJukScPmsCP6wnWObaXwbQwaacjhOE9FnRaOAAo4Qc0mbaImjAKtYrNBIiRQCMHNwFfFVWbFgkTJzLvGzZL/hw147rwspDEYsB+XSt/yYcDjGCk9gZ6JSUdIVM0KloSSgIU65Oq/HTMFVolgcmRaFZ7zojnm6jC4NIajcoPZzpBJA0CSfM0duxgoni/jpugB5wSLNiB2RxwTzcoWVEmyWqhxOhiinmuIlThIWzf1ExI9MNwOUZWvOYdEKefwE35RsHrUwyXG3gFXcuoD4WIdvsWD5ED9hG2heN5FcyXOOpaxGAQ79X2mOxAxmR/A1C4aCvI8Ilqgz+MojtZjXTSv3GdmpLVJJyWxXqf3Zd7tDr9d3fIGx9GU6n1Opf4AtxU/qucO0vwe+Qvs3FuAGXqt8vfR17qXwdVvj0iSs7t3dureRSvhGMa/ofuCckO7tWCcv/Pc077i7NBUMKg0BApgBcz9klNeP+iKxrfVa5jCl74GqUPqZ/UbjwsJ6C67Vvl6+pn3dv6H99oHaf/vQHzjOKcn/Ix37ZKfYqFdp6iFORbTDAf6CSa2MN51QqzjMEXuALBzx3aDcNMQm+L/xg/fph//fD53uTqnV/laUqiZxFLAcsay5wpzMVF7TB0qUPItWX++yTCqsGGkNhsO+18U94vWx23Ydb+AE3bDv0Y7jem7PW6/vt110hB0Pc90eVJSvjZRT+R411nNlUtimuu/KC63Y0Xqvc6z3x4lZ76P8EyM7tRYOK20FKRAEb+v6c3uKDOwpGk1RFEd0ippTlFf5ubh0GCoAXJnQsSxbr00kFdhu4NaWVXeAV1JXSrKgAWhTR19EfG0GGz/Ga38PTgr/jVPaGBtStmmyvitxGl7Y1p03sQV6py83rH73dY9293U+7fev9gOYzC+fF3Cxwel3RE/e/wGIADtrAhMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>14</order>
+        <parent_ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>8a28f147c30b1210c07d190ed4013124</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>dc5d64d0-1504-4e16-b466-836481c502e3</ui_id>
+        <values>H4sIAAAAAAAA/+VYTW/bOBD9K4LOjlfyt3MrEhgo0G2AJttLt0tQJBVzlyZVkkqaGP7vHYqUbdiKbaEOkGBv5nBIvpl5b0j52zLmNL6M6TSZ5tPpcDJOkn4/SUajPsFplvVHJEsyPIg7scQLBp4WZ4LB8AGL0o3Nk8FFoRWMkf/BNExTbgqBn74Grw/BBWbInAuqmYwvv33vxAXWsK+FNZfLnalTgQmcMQGudwHZDlD7VKyHqJrztk/by6LPfkJp6qAknZj9tExSBhhyLAzrxAssKbZKP60tmmF6I8XGMOfSwo6xc/5p+DOcO0mcX84gKsL83HqIQpK8Ob/GFt9aXRJb6uBK5ooTZnw+KMtxKezVts073BSWK+mX+LD9aiXKhfzs0xGvN6hrApbSAAhWuEAd8hBGfjtXj19qlDMuq5yESaEIlLEeYWs1z0rr8CxjJtgCNkILIAKX98jVnFeLAcuiey9g0M2FeoRDDb+XXUwc8C7kFXdnYL+uzF+x5i6KP2Gbikw5F8AQ5EtoVKmrVD4gIkpTTWgsjd8rXnUcJa8ENmYTOaQc/Sgdbp+HEDHySXNLiOaF/QBbPLAQ3KpTa2N4kILTDeWIkpQ7FKZZIH+XsANdLq+AOZZRlHZJqSHJdrX6x1gweQfN/mUE5vdl9Ft7tRTe8ahr4V1th92UiiDBPdunpg2CBNOzSXCQJO9JhHD429Nge1X5FByRVkoPkoxu+GSUtsjncktb+wppzfMTINQ8v3HMjLKnl1AFmuecCdp008zcxM5N0/t/3jRvkuQAiCJfPS4Fl9WzAYC+FvuHB6mXpTs8q+i1da84GzZkXwM4sip6bq2EE+DUSriFs6M7j6cBYt3vK8rs9vraGATQP5sA+r3zCGC5DnOdyIac1y9FV83a/9n5411/oODWgnTVJLBWZ6Ztz+yt9gXcb6XgbbL5mesXOHfmJ+ULiuy8ZguYw9JwHvL6RY+c3jO7Ob32oso+YvFf03xgHKoLVYX3Cs/T9OAXUrb1POU5WkDleAGvaM0IkMMgrBnKVSkpCu/nDZFcJXOujQ3O+43mCwP9yEiBMCM7Z1HlHa29W17Ex+OoU/kxj+pAwmkmgkCiKpBoHUi7sNs0rcEZH6fnblozzEVVDfg0KrbKybRW+oXGdaSQBxhxYlc7EVR6VlC/3/aaJNDY/o5gfRff2edvTYThbNDDo3E/TZMkTeg4mYzH6WSU5SM8HuQbjSJkJIFuCjvnQBXYHtXUqOuc7Pcf31LbNpoTUNUUvFbSfUb3xjZysKC+UQ3rOPDQUDKlBMNyp6PcwT3xxyzgD3wdvrmu8i7+dSr53W6mvakx16/1bij5X5L/KNlHR7EJS3qTlJKLyTgdXwxyOrqYUjy8wNNsOO5TRgb5OZ8C338BGKjjIscVAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>d87dc38a-c86d-4c1f-a039-4ab59122fe91</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>b128f147c30b1210c07d190ed401311f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>c9c70bf4-78a8-4e3e-a8f3-f11f425e431b</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5GfoyppSgd9m6iQJvEhwcQLg+jWvk2tOXZmO9Cu6n/fTeKUCBADiT2g5c33+trnnJyT3GyZFGzGJiiS9Cid8izNsnGSjA8n6WKaLdKxyAAxZTHTUCLttMiNFbS+B1U3he322CJ4FHk64rW1qP1uR30hXaVgcx22UYWvpBLUZ7Ob25hVYOlEj5bNtk9ab4WkYIGKtl72mJ5i9JuqWQvD65Jw5bIvnobJeehE3+bUoaEGTprEDNcetUACsgTlMGYlaAHe2A2beVtTgUiLC602+x0rqX1HtIS1k7/p5knS7FsiMeNBhP0yDwJ15eUcPFzRydzXdq+XkRxdp4nAJdTKHw9r3YaLykujuxEPC9VPG1WX+rxThO0PGLyP2hEIrBqeDfKO1vJqZR4ue5AnUreSBIrKcFD7FXhv5aL2DZwtQ4WtxiVUldRFXllzL9thglKOCkWL0VKZB7rTyUKPgDe4R6QqjE6oPm/L12BlQ+KMjqHhXczcxh0rcO6RCmmY/6obJB2xQCFvVWglyFsnNMPcysp/pavuMQDfxcH0i4PXHMaPHg01OPPR+Os8PTjKpl+S3AK43NVFga59Fc/MfzXsvS8GbwDZx+B7+/JfBh2S8Kx2OpyNzrtGyMHBh+Xg8DPlIND49EH4m/2T8asf2IGTWse7gfWdpw/+jzpJMjG5s9gwxJyM4IzuqmcoJESgGnNsIlxL510kdeRXGHHiqUwRR5WiCYyUMT8jKEC+EJx/d9H7UvgGrfoUnkhUwr0gXh9BLImhx7wT80kMQzO6Ds39L+nDsphOk/b5RIn8b/5Mt38Aj0LacJAJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>c628f147c30b1210c07d190ed4013122</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>fb17a146-aa14-4f01-86cb-9c6f28ffe9c4</ui_id>
+        <values>H4sIAAAAAAAA/9VVy27iMBT9lcrrECWEpsBuRMVq2krTEZtOG93YN2DJeYztUBiUf5/rPCjqFM1Ds4Gd78vnHF9Ong5MCjZncYjB9SyMeRRG0TgIxtNJmMZRGo5FBIgT5rECcqRKC6nCpD14bAuqdsFdEl7PovgmSDSASXIUEigtpKkU7Fd91V0f5huphMaCzZ+ePVaBpmEWNZsf3qX+FJqCFBWVfnXYzkC1++rD2OfT3qv7LlFq4fAEHsOdxUIgAclAGfRYDoUAW+o9m1tdU0AjiIdC7Y8VG1lYGshc7c7IH3TtNHB1GRIzjl3ueEx6lbpwdgsWHmkyt7XuS/mmlBxNp4nADGplF6exruChsrIsupaWZt9dqjov7jtJ2HHA8CgUqQ2BwMrxdMh7Gtnjpnz9MqBcyqKVpE+qkoM6nsBaLdPaOjwHhgpzGpTkUFWyWCeVLreybSYsub9WdPAzVb7SpUauCx+4A+6TrOAvKX7bhlegpWNxR2OoufGY2ZuFAmPeuJCIyffaIemY9RySTgbXwrWs7Ce6YIs93MYbdl5gMDu7WGH6tkjtmpuTfbfSKvxWB0EkDocFbYBFkYQ+rzWJZf023TQvbr+GKhFF8WQc4ojum44mUcRH05sYRxDylE8ikWGa+ho5rZ7v+qhdk5JAb7NH0P8y5rS/aX79P14oi7+0j9+/8mAfS4lKmA+effAOzEk+i0m3Bu/8o09erfpk7yHh//KQMA7a3wU5SUfu4o3k5JtxxlKefwIxppL3SAcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>16</order>
+        <parent_ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:57</sys_created_on>
+        <sys_id>ca28f147c30b1210c07d190ed4013125</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:57</sys_updated_on>
+        <ui_id>1d6c5a67-4aa7-4758-ac5e-3e927ff84abf</ui_id>
+        <values>H4sIAAAAAAAA/9WW207cMBCGXwXlerOKk+wmy10FQkKiVALamwpFE3u8a8k51HG20BXv3nGSPcGWAi2Veunx6Z9/5ovzdeUp4R17sUiFmEkWSMZYwIIJC1mKKeY8mSYYpt7IK6FAWmmQV0bQeAm6dYHV6sQgWBQZG/PWGCztwwPNC9XUGu6/DMsowhdKC5r3jr/ejrwaDJ1o0XjHq0dTL5WkIUdNS6/Wmh5rtPe1G4uKtwXpytQ6eDHsPB1mjs5PaYY2OTls5OGdxVIg6ZCgGxx5BZQCbGXuNxFKWnwq9TawUKXtEy3grlE/6OYodOskUmZ8MGEzzAaD+rA8BQvX1rTctmbjV6U4Nr0nAiW02p7sxvoFn2qrqrLfYiHX692VbovysnfE2xywU4+2IRFYu0SdcrqcspDXi+r71VrkmSo7S4YUdcVBb0ZgrVF5a52cldeqm0Nu9+HDfqPGbmEBda3KeVabaqm6+0h9MZ5rGoylrr6TzEbNyzFwl+qYKgHjM4qfduEvYJTL+yMdQ5vdnZ9L9a3Fc9dHggVJNAu4n4STyI8DDn6eityHPJSTOJ6m05x5DyOvuW9ONDTN1jEqVfatdQn3/g1OZZ3ZndNZ13BuMzeqth9I3hIHfx5GA1spe66Ro3Dbtztnbvm6y9hkFk2TIDMATda08zk2XcWfMHa9O/c62l4gck3bTddjh0UPwD2JXezuPbrsJwbcwlfi1vfpAdrS4D+ibUjrz3Hb83qftj23/wlsPM9zmePMZznnfpxg6qchJD5OAh7JMAqCRL4Btt8hFj/fvTvPV1lZJRWHAZI1ZDwJUc7YNI3iiPYGwNM0YvlUIoCIIH6OtSODzksUr3/ifi97Dd3lvu7D2Qz0bRnYh+9qJz6wFz3PXo/aW146KjAuXf2wAKWzvpd+AeSj3P4ynL9SskcsSInc/cNIhVpQ02Xdnnd5NuU1guGLM3eTq2GP5z7de4UlxumOJ3TvlvP94L552lMN2mywJXMHZLIyBbiO6DJ8/E2IZwyTKEz92TSkbwJGEz8XUeQz+kYgAspQvM8DfPsT/bw0W94KAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>ce28f147c30b1210c07d190ed4013122</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>2c3acba9-996e-48ca-8077-0ab2bf2359ff</ui_id>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9FeQ1ihICTGFXgZBG6rRSGbHpVJFj34Al5zF+UBjEv89N4oQIqg6VukGTne/DPuf4XOflQAQnUzIE7geTYMzCIAwHvj+4GwbxOIyDAQ8pQED6JKMpYKUCliuO6y2VtgwcDjMF1ACPAo9ZpSAzxyPmudCFpPuVK8MI2wjJMU+mL699UlCFOxpQZHo4S10LSdIYJJY+N5jOMZp9Ua55zmyKuCLRBB9c59xlet/nmMGmEk7g9wnsDGQcEEhCpYY+SWnGqcnVnkyNshhA0vwpk/u2YiMyUxNN6U6LP3jy0C/rEkBmzInQLiMnUB1O5tTQJe7MjFWtXrlgoGtNOCTUSjPrxuqCp8KIPKtbDI1l051Lm2aPtSKk3aBzH1YjCChKniXymlay3ORvzw3IhcgqSRxFmTMq2xU1RonYmhLOgYCESuOUFoXI1lGh8q2omhFK6q0lLrxE5m94phbrzKOsxO2hqtRbYHxehVdUiZLED9wGm499ovd6JqnWJyqoYfTblkhqYo5CVKlQSRBVTiibmRKFucejtuCAH/vO9PHoI4exyclQnT1Pxt9FwWgSjr/5kaJUR9qu16Crq7gw/7Kb+9wYXAGyGYOf1eW/D9pNwkXsodvbe6wTbg5GXzYHd7c0B47GzQ/Cv+zvDz58YDtOqhyvO9bXBh/8X9b3Qx5euv0s+zm/X4Gq8ftCgOT6HZiN2SFFWAaiGvaZ4V2yt3LJ9vH/MtcHY7/6bsj7/80/4PUvSF/rMfoIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>f528f147c30b1210c07d190ed401311d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>dcd97419-ac1b-4587-8e03-584b949d7897</ui_id>
+        <values>H4sIAAAAAAAA/+VX226jMBD9lYjnCEFJ0svbKlWllXqR2qov3V1rwCax1gHWNknTiH/fARuCEtJNpERqtY+ei31m5hxjXlcOp86VcxEPPA/84cW55wWB541GQQR+GAajKPTCQej0nQRmDCM1hILhcg4iL9dvxB9eBqNzj0gARWaMckA35SoTsHyxUXfWHE25oJIlztXrz76TgcRNNZPO1WrDtS8qASETGPpsYW2g1MusWZLKZ2y37bTevXGkkpZQvL7D3jRLKEMMMQjF+s4MEgo6lcvGIhnQh0SsDVOeaNzRKYPfFH/Hcy+8Mi5mWFXEjK9ZEtshY46vQcOTlnmkc2lDo2nKI6ZMPyiLIRd63LaZgIdM8zQxKaZsk52KfJbcm3Y4zQb1QNCSKwTBsrLQErktI36apovHGuUNT6qeWKdIIxDNCrSWPMx1iWflMMFmuBGZQZbxZEIymc55lYxYZu5E4MKNRbrAQxWfJC5EJXAX+wruDdqvK/MLSF5WcYfbYDIC4gIZQswIVZrLqpVzEolcVQ4JiTJ7OUXfUUs1FqDUunJsOfmTl7hNH2zFxDStTIkkz/Q33GLObHFFfy9hDL015aI0obxEoVrq0FwL9iPHXLpajZEzmlHiu1Eusb3ardxF8Uti8wDHsWQgd0e3o4piW2SnPeyY0q36Vkt33G5cVzOtiLdst10bWBH7RxMx1vGVZIyHfz4VH65L04J/iDM6/5BkwzWfVCo1Mb1sqXNbQgfzfA8INc8fSmb2wuUuVJbmMWeCdn2rbkrHxrfq7P/8Vn1KkiMgSsz0eCJ4Ul3JCPRU7Pc+vmIvN3hW0WvN/coGKtrWAPR02ns/WAl7wKmV8IRn954Nng6I9X1fUWbzrq+NVgDB0QQQnB1HAKumzKaRHT2v35rlNOv49zIeNuORgq0Ev+gS2EFn+oeeeVZsCzg4SMFtshnP9Q7OHflRukOR/VNeAVNMtecRo1+y4HTC9Pr0OoqmegHid5ffMo7Ug6rKO8EDd/ChbEf+WqKoFCKZwuG1X7g+Po+27xDfNebDrpA9sNTtuIO33mMDphOhvUZQ6WxSzaZ9j3xvrJbkgyM+GD/tl7QeVqcG65l9if/C4wnh5183gcrbBBEAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=3528b147c30b1210c07d190ed40131bd"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=3528b147c30b1210c07d190ed40131bd^sys_idNOT IN3528f147c30b1210c07d190ed4013119,7528f147c30b1210c07d190ed401311b,7928f147c30b1210c07d190ed401311c,b528f147c30b1210c07d190ed4013118,b928f147c30b1210c07d190ed4013116,f528f147c30b1210c07d190ed401311a"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">3d28f147c30b1210c07d190ed4013118</block>
+        <comment>sugestão aprovada</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>3528f147c30b1210c07d190ed4013119</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvFHnM55KymFQbfCWvqyFXMty42YLHmSnDQz+e+7shwnrBlbWR/3Yqwj3atzju/BPVGdbTtr7tWlMfxJkuWXx4Bw6TB874mEhpEloUpW3HIliwEIyAZE5zbwteKmFbB7OCJ0zUWl2ditBY01lmmy7H/Z4hUW1BHUcU5jmiaLNImi5P08LhdpGSdVCgxSbCigZAKPrg403t0MSPBbfnbXOtxYzeXTuL4Zu9wdQKUrxyqOAsKeLZMVQz41CMMC0oCswCq9mxDNoLqV4gisubRecAPPhv/AC5MscwdrhhLp6Ma0LEanPFxfgQWk0lHb6ck4xSkz3pyK1dAJuzrF/IHb1kn1JRZKcahWomvkJ+8ImRqcfJjOIAnWOqWO+qijvlur7ecDy2suB1fGTaEoiGkFFr0rO+v49IQJ1mCjooG2RUeLVqsNH4qRSxM+CVyEtVBbvNRNVwjUEQ/RWAivEb8a4AfQ3Kn4iG2w2NMswXBaDJOI7dAmRvYBMTuzEmDMUSS6W3zvHEUveRRXeH9cCdW8tZd484aNOvbBy8E+mem+j2lZZ7TMZwmDi9kccjrLowUuL+I4gRyfUIfIFvWCKIwFy/b7r10UpZVHcZBeBOOt2r4uXTlkdRZH2fl0zRfn0nUmV6+MVPKHSLnv+ZeJiqLof6T+OVLcFD4Io7bh8jdM1KOLj79z8ppyg9TuHfbh8EdxGzscLk5Poa3S35yoI7b/CbUPioubBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">7d28f147c30b1210c07d190ed401311a</block>
+        <comment/>
+        <connected_to>b7cf0d86-f4dc-462c-b648-c18637f95b96</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>7528f147c30b1210c07d190ed401311b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</ui_id>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K8jPaZSka0f7NnWahDSYxKa9wBTdOE5rcOzgj3Yl6n/nOk7Sig0Boo+8RPGx7/U5J/coLVHONs6aB3VlDF9Lsvz0FBEuPYbvLZFQM7IkVMmSW65k3gER2YJwfgNfS24aAfvHI0I3XJSa9d0a0FhjmSbL9qctXmJBlUCVLmhKp9l8miVJ9vYiLebTIs3KKTDIsKGAggk8uhpovLntkOiX/Oy+8bixmst1v77tu9wPoNKlZ5UmEWHPlsmSIZ8KhGERqUGWYJXej4hmUN5JcQQ2XNoguIZnw7/jhdls5g9WDCXS3o1xmfdOBbi6BgtIxVHr9Gic4pSZYE7JKnDCrk6xcOCu8VJDiYVCDNVKuFp+CI6QscHJh3EGSbDGK/XUex3V/UbtPg4sb7jsXOk3haIgxhVY9K5w1vNpCROsxkZ5DU2DjuaNVlveFSOXOl4LXMSVUDu81E9XDNQTj9FYiG8Qv+7gR9Dcq3iPbbA40CzAcJp3k4jt0CZGDhExe7MSYMxRJLqbf3OeYpDci8uDP76Eat7YK7x5y3odh+jlYJ/MdNumtKhmtFhMMgaXkwtY0MkimePyMk0zWOATqhjZol4QubFg2eHw2SXJFGf7C6MWB+lFMM7V9qzpSl9L1yu5+stIZb+JlP+ef5ioJEn+R+qfI8VNHoLQa+suP2Oinnx8wp2j15QbpPbgsXfDH8Vv7HG4OD2Fdkp/9aKO2OEHtFaBTZsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">7128f147c30b1210c07d190ed401311c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>17</order>
+        <outputs_assigned/>
+        <parent_ui_id>99b04fa9-a601-45eb-9e31-8d5a2639768b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>7928f147c30b1210c07d190ed401311c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>35beb915-d9a0-414d-8b3b-c4aaf2e2fba5</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">bd28f147c30b1210c07d190ed4013117</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>d87dc38a-c86d-4c1f-a039-4ab59122fe91</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>b528f147c30b1210c07d190ed4013118</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>7e121018-168b-408f-9136-35446741b2d4</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">3d28f147c30b1210c07d190ed4013115</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>b928f147c30b1210c07d190ed4013116</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>d87dc38a-c86d-4c1f-a039-4ab59122fe91</ui_id>
+        <values>H4sIAAAAAAAA/51TwW6jMBD9F58TBIEmIbeqVaVKu1sprXpZVdFgD4m1xmZtk5RF+fcdx4RWPfYE8zzz5r2HGZjpfNt592JunZN7zTa/32ZM6oDR+8A0NMg2THpsHJuxI6gu1MMguChXRVbOgWfVvLhZr+ZrTPP5zbqoyqIUq3W5SrbIjRXufKZRIV2roH/9PgM/SCUsjiJbsKTNo2Wb4cuRFLQgK0VdZmnJ88UyX6TpYl1k1TKvsoXIAcWSCBVUqKj1cXT3xazv21DaKGEEfowz2wmlRxCxSGcM3z1qgbS+BuVwxhrQAryxPdt42xFgEcSTVv3UcZDaEx0Lve9O/qONWZqGxhrJEMd4OJW7MccI1/fg4Zmoue/s2MoPRnJ0MQqBNXTK333GYsNT66XRccRDpa7TRnWN/hWTYBPB9bMR0jkSgW0wGqSPPurngzltryofpL6EMh4qw0FNFXhvZdX5oGdgqLAhol0DbSv1ftdac5SXYdLSJHtFRVIrc6Kl4YomwIPwhHKF5IHw+wv8ClYGFz+JhobPM+Z6d6fAuQ8vFOLubxeURGejh12MIYxwK1t/SwuOOMo9v4VbH7mnTLl0JOElYI/XfyUc9HSDJP8MnYz9E8R/YOf/E6RcHXUDAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">fd28f147c30b1210c07d190ed4013119</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of Suggestion lifecycle">3528b147c30b1210c07d190ed40131bd</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <parent_ui_id>b7cf0d86-f4dc-462c-b648-c18637f95b96</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>f528f147c30b1210c07d190ed401311a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <ui_id>2af1b2d1-c038-4533-abe4-ce85c8cd73c6</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=3528b147c30b1210c07d190ed40131bd"/>
+    <sys_hub_flow_variable action="DELETE" query="model=3528b147c30b1210c07d190ed40131bd"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd^sys_idNOT INf528b147c30b1210c07d190ed40131db,fd28b147c30b1210c07d190ed40131de"/>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>f528b147c30b1210c07d190ed40131db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:56</sys_created_on>
+        <sys_id>fd28b147c30b1210c07d190ed40131de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_3528b147c30b1210c07d190ed40131bd"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_3528b147c30b1210c07d190ed40131bd"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=3528b147c30b1210c07d190ed40131bd"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=3528b147c30b1210c07d190ed40131bd"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</application>
+        <file_path/>
+        <instance_id>408484101bad86d87d9d2f8dee4bcbb8</instance_id>
+        <instance_name>dev259545</instance_name>
+        <name>sys_hub_flow_3528b147c30b1210c07d190ed40131bd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=72612000,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;26000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build&gt;glide-xanadu-07-02-2024__patch4-11-22-2024_12-02-2024_1408.zip&lt;/compiler_build&gt;&lt;copied_from&gt;38de920ac3cbda10c07d190ed40131f7&lt;/copied_from&gt;&lt;copied_from_name&gt;Suggestion lifecycle&lt;/copied_from_name&gt;&lt;description&gt;this flow create an approved media suuuggestion in the media table&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;copy_of_suggestion_lifecycle&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"{{static.5f2c319283431210ac8831b6feaad35a}}","label":"Raas Administrator","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"1cbf5cb9-2ea7-4a9c-9069-27112a9711af":["approval_conditions"]}},{"name":"Created_1.current.release_year","label":"Trigger - Record Created➛Suggestion Record➛Release Year","reference":"","reference_display":"Release Year","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"release_year","usedInstances":{"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"dcd97419-ac1b-4587-8e03-584b949d7897.__action_status__.code","label":"1 - Look Up Records➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{},"attributes":{}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.title","label":"6 - Update Record➛Suggestion Record➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"title","usedInstances":{"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Suggestion Record","reference":"x_1593670_raas_suggestion","reference_display":"Suggestion","type":"reference","base_type":"reference","usedInstances":{"d336421e-6c38-433c-876e-a1cbc43dfebb":["record"],"1cbf5cb9-2ea7-4a9c-9069-27112a9711af":["record"],"ce2dcca6-4fbc-400a-a095-578a0e439d58":["record"],"de64e908-9d2f-4ac4-97eb-6c4c9630f4ed":["record"],"9012435e-7f0d-4ff2-b01f-8ef0631a94db":["conditions"],"c9c70bf4-78a8-4e3e-a8f3-f11f425e431b":["record"],"2c3acba9-996e-48ca-8077-0ab2bf2359ff":["record"],"dc5d64d0-1504-4e16-b466-836481c502e3":["conditions"],"ecfae454-20ee-4386-82a1-3d55486b0629":["record"],"1d6c5a67-4aa7-4758-ac5e-3e927ff84abf":["record"],"2f42358f-12d2-41d9-b965-43ea54998370":["record"]},"attributes":{}},{"name":"{{static.899735a6c37a1210380d5f73e4013163}}","label":"RaaS Administrators","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"1cbf5cb9-2ea7-4a9c-9069-27112a9711af":["approval_conditions"]}},{"name":"1cbf5cb9-2ea7-4a9c-9069-27112a9711af.approval_state","label":"7 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"b7cf0d86-f4dc-462c-b648-c18637f95b96":["condition"],"99b04fa9-a601-45eb-9e31-8d5a2639768b":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.title","label":"Trigger - Record Created➛Suggestion Record➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"title","usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["title"],"8b462a41-47a3-4cdf-a7a5-1f70a295557a":["condition"],"dcd97419-ac1b-4587-8e03-584b949d7897":["conditions"]}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.type","label":"6 - Update Record➛Suggestion Record➛Type","reference":"","reference_display":"Type","type":"choice","base_type":"choice","parent_table_name":"x_1593670_raas_suggestion","column_name":"type","choices":[{"label":"-- None --","used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Movie","used":false,"reference":false,"image":"","rawLabel":"Movie","selected":false,"missing":false,"value":"movie","parameters":{"name":"x_1593670_raas_suggestion","dependent_values":[""]}},{"label":"Series","used":false,"reference":false,"image":"","rawLabel":"Series","selected":false,"missing":false,"value":"series","parameters":{"name":"x_1593670_raas_suggestion","dependent_values":[""]}}],"usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["type"]}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record.release_year","label":"6 - Update Record➛Suggestion Record➛Release Year","reference":"","reference_display":"Release Year","type":"string","base_type":"string","parent_table_name":"x_1593670_raas_suggestion","column_name":"release_year","usedInstances":{"fb17a146-aa14-4f01-86cb-9c6f28ffe9c4":["release_year"]}},{"name":"dcd97419-ac1b-4587-8e03-584b949d7897.Records","label":"1 - Look Up Records➛Media Records","reference":"x_1593670_raas_media","reference_display":"Media","type":"records","base_type":"records","usedInstances":{"afd1a81d-aa38-46b6-b1e4-755875bd3b57":["items"],"d87dc38a-c86d-4c1f-a039-4ab59122fe91":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d336421e-6c38-433c-876e-a1cbc43dfebb.record","label":"6 - Update Record➛Suggestion Record","reference":"x_1593670_raas_suggestion","reference_display":"Suggestion","type":"reference","base_type":"reference","usedInstances":{"ce2dcca6-4fbc-400a-a095-578a0e439d58":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Suggestion Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1593670_raas_suggestion","column_name":"sys_id","usedInstances":{"82cc6521-036c-4645-bfb6-f2737fa1e446":["conditions"]}}]&lt;/label_cache&gt;&lt;latest_snapshot/&gt;&lt;master_snapshot/&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Copy of Suggestion lifecycle&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;3528b147c30b1210c07d190ed40131bd&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Copy of Suggestion lifecycle&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_3528b147c30b1210c07d190ed40131bd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:57&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=3528b147c30b1210c07d190ed40131bd^sys_idNOT IN7128b147c30b1210c07d190ed40131c0"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;3528b147c30b1210c07d190ed40131bd&lt;/id&gt;&lt;name&gt;Copy of Suggestion lifecycle&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;7128b147c30b1210c07d190ed40131c0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=7128b147c30b1210c07d190ed40131c0"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=3528b147c30b1210c07d190ed40131bd^sys_idNOT IN3d28b147c30b1210c07d190ed40131dc,fd28b147c30b1210c07d190ed40131c6"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/model&gt;&lt;model_id&gt;3528b147c30b1210c07d190ed40131bd&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;3d28b147c30b1210c07d190ed40131dc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3d28b147c30b1210c07d190ed40131dc"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/model&gt;&lt;model_id&gt;3528b147c30b1210c07d190ed40131bd&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;fd28b147c30b1210c07d190ed40131c6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fd28b147c30b1210c07d190ed40131c6"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=3528b147c30b1210c07d190ed40131bd^sys_idNOT IN8228f147c30b1210c07d190ed4013126"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;name&gt;Created&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:57&lt;/sys_created_on&gt;&lt;sys_id&gt;8228f147c30b1210c07d190ed4013126&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:57&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created"&gt;798916a0c31322002841b63b12d3ae7c&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuvgS522bZNEA2w1qp+1DkAqUNLSJ0pQrUsp6F/n3DnWxZV0c37LJvgQwSXHOHJ45Q+bhm8mJD9y8NO+Jz8HsmUwoiAXh96sl4LDSw54gCz23ICIkKopX5qWKE+iZURxCbF7aPTMlPIHpSt6G+BEuzb4oPjeLafz9xbMHY3c4sryYEOnJZDYDqVgkcE3I5JKT1V/F0ml1LpgzHsYgzMuHx565JDFur3Tob7UppuMHNCBjB6zAtV3HsSznom/7Q9e3ndAlYFm4YT3tGl7Vkv0mWfiiQISAoSjhElqIiYGEd4Kv1ivmyGvOzIJ8kewr7n5h6XUUEHsA+Vwwj1gAd8ss62wkB5RPRjxZiM85UM0XUJJwVfKFI4kEL4SlxqajFaHpdB49TcpAH5nI0igmeRQQvv5FlIqZnyiQmlnKOHLs5STIKIkzmJObq7vJtff3h/ur324m3uRmej+5vbq/uTafs3y8/xK9Y46wwOLl6TyvD/kjA65PSiQLH9H0TBnEbKk+BIqlUMB57m3UeRWJkBVaqCk0KKfktkKLlMpTs6xOkQaVzUuh/nPzR1OS+eBhWhwOCQmBdGjRpxUtVpNsgaZa8q1mt0uVxcg+suxb1msLM6+Ro3W5iELg15vtTJxEr4g9JpaJ0rQ8EaGkpyKPhKFXIUwvRUwvCTXP7flFVcaJwA+8NfFNbWa0rfn7xCTCfcDKKrnJtsR5+qnYcpIII8ITwj9GkMRIjTJKU6K3CzIrGKVT4BCoymnTP2X11+9MSiZmFdTroBkHjZjrcKgao0wpjy1PDP54ZGE2+U1rvNUK9ODqtG1KfaCONdK1aVuuT21rZA0IDV3LCpxKdTbBdKJUtdN/lSrtqFGZCYzvIac6lwVKq6rwvaSRbuuqzFYfe2EFV+eBZp8JmqOh1SzNPcjT1vrLh6+3ZbgrtTP3aBKmBL8I97W2PV2N8ugJ7fQIR/NJ8O8sjhIR1i1G72kwYWxWGD8V/P18RnejUQy7AWyveCNf2zBcapSI1RkczaW2P4Y+WGhkLnqYPxiP/YA4lI6GI3DsmqNtYLRie19O9oKC0jYJdrlaqxjSNg0d4GcnAGx428EAT3e1QoGtnpbP/Rju9TQH4SHU2OPanxomNuMshHLu6ApuREk3NXtqFdOLcTCwR6NghC8GrGLaB5/YfWdAxqOhezGoVXEDyi6YqoWE7/KOkCuZAXl3D93XlKEEpXTLOLyTCrxUZt+QPEilm2nujcwkotj4HIlfbjfrjClgk8pejOdqqfugwM1i43Vh+JGaN3o6hv4Vx7dC67tgBytv+ZSp6SHdTuvkpwz0LwZj6rZbBh23WcYGTDfM93MF2FP1aWf9tN0F9hVx2loLnc37CFnW9FDt6juuHecixT47Kc7rkeKefNUpi67z/XYM2B+oLWUXglN6k44JXkSrhnwdGThhYBCDUaP4rxw+x/2VoeaAlHK802JAQ0c/1YmrnaEJZa3g7wskvyU3OhQOG8XN502bT+3Uz/vyhHBEBgO34846rr882wC9gPf9tKKDlZ62Fc7OfnTYvvU9WztSRYbbR79nrzlr1u0N57SsW1vOS1mf3kx2vZtbULzTNvH4P7QnrkMOHgAA&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=3528b147c30b1210c07d190ed40131bd^sys_idNOT IN0a28f147c30b1210c07d190ed4013123,4a28f147c30b1210c07d190ed4013120,7128f147c30b1210c07d190ed4013120,8228f147c30b1210c07d190ed4013125,8a28f147c30b1210c07d190ed4013121,8a28f147c30b1210c07d190ed4013124,b128f147c30b1210c07d190ed401311f,c628f147c30b1210c07d190ed4013122,ca28f147c30b1210c07d190ed4013125,ce28f147c30b1210c07d190ed4013122,f528f147c30b1210c07d190ed401311d"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Send Notification"&gt;0d8dd9f10f11101051218e8ebc767e27&lt;/action_type&gt;&lt;action_type_parent display_value="Send Notification"&gt;7eda5d710f11101051218e8ebc767ec1&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;0d8dd9f10f11101051218e8ebc767e27&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;11&lt;/order&gt;&lt;parent_ui_id&gt;b7cf0d86-f4dc-462c-b648-c18637f95b96&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;0a28f147c30b1210c07d190ed4013123&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;ecfae454-20ee-4386-82a1-3d55486b0629&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/9WWyW7bMBCGXyXQ2TJESbbk3IoYAQqkKZCkvRSBMCKHDgFqCUW5SY28e4eSvCVulrYp0COH2z//zCfq28pTwjv2YpEKMZMskIyxgAUTFrIUU8x5Mk0wTL2RV0KBtNIgr4yg8RJ06wKr1YlBsCgyNuatMVjahweaF6qpNdx/HZZRhN8oLWjeO/52PfJqMHSiReMdrx5NvVaShhw1Lb1Ya3qs0d7Xbiwq3hakK1Pr4Nmwcz7MHH2c0wxtcnLYyMM7i6VA0iFBNzjyCigF2MrcbyKUtPhc6m3gRpW2T7SAu0b9oJuj0K2TSJnxwYTNMBsM6sNyDhYurWm5bc3Gr0pxbHpPBEpotT3ZjfULPtdWVWW/xUKu17sr3Rblee+Itzlgpx5tQyKwdok65XQ5ZSEvb6rvF2uRp6rsLBlS1BUHvRmBtUblrXVyVl6rrg653YcP+40au4UF1LUqF1ltqqXq7iP1xXihaTCWuvpOMhu1KMfAXapjqgSMTyk+78JfwSiX9yc6hja7O7+U6rbFj66PBAuSaBZwPwknkR8HHPw8FbkPeSgncTxNpznzHkZec9+caGiarWNUquy2dQn3/g1OZZ3ZndNZ13BuMzeqth9I3hIHfx5GA1spe66Ro3Dbtztnbvm6y9hkFk2TIDMATda0iwU2XcWfMHa5O/c22l4hck3bVddjh0UPwD2Jne3uPTrvJwbcwjfi1vfpAdrS4D+ibUjrz3Hb83qftj23/wlsPM9zmePMZznnfpxg6qchJD5OAh7JMAqCRP4GbC8hFj/fvTvPV1lZJRWHAZI1ZDwIMWGTaRrFEe0NgKdpxPKpRAARxcFzrB19qJ2XKN7+xL0sew3d+b7uw9kM9G0Z2IfvYic+sBc9z16P2u+8dFRgXLr6YQFKZ30v/QLIR7n9ZTh/pWSPWJASufuHkQq1oKbLuj3v8mzKSwTDb07dTa6GPZ77dO8VlhinO57QvVvO94P76mlPNWizwZbMHZDJyhTgOqLL8PE3IZ4xTKIw9WfTkL4JGE38XESRz+gbgQgoQ/E+D/D1T6mvjyXeCgAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;6&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;4a28f147c30b1210c07d190ed4013120&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;d336421e-6c38-433c-876e-a1cbc43dfebb&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VVy27iMBT9lcprFCUEGGBXgZBG6rRSGbHpVJFj34Al5zF+UBjEv89N4oQIqg6VukGTne/DPuf4XOflQAQnUzIA7geTYMTCIAz7vt8fD4J4FMZBn4cUICA9ktEUsFIByxXH9ZZKWwYOh5kCaoBHgcesUpCZ4xHzXOhC0v3KlWGEbYTkmCfTl9ceKajCHQ0oMj2cpa6FJGkMEkufG0znGM2+KNc8ZzZFXJFogg+uc+4yd9/nmMGmEk7g9wjsDGQcEEhCpYYeSWnGqcnVnkyNshhA0vwpk/u2YiMyUxNN6U6LP3jywC/rEkBmzInQLiMnUB1O5tTQJe7MjFWtXrlgoGtNOCTUSjPrxuqCp8KIPKtbDI1l051Lm2aPtSKk3aBzH1YjCChKniXymlay3ORvzw3IhcgqSRxFmTMq2xU1RonYmhLOgYCESuOUFoXI1lGh8q2omhFK6q0lLrxE5m94phbrzKOsxO2hqtRbYHxehVdUiZLED9wGm489ovd6JqnWJyqoYfTblkhqYo5CVKlQSRBVTiibmRKFucejtuCAH3vO9PHwI4exyclQnT1Pxt9FwXASjr75kaJUR9qu16Crq7gw/7Kb+9wYXAGyGYOf1eW/D9pNwkXsodt791gn3BwMv2wOxrc0B47GzQ/Cv+zv9z98YDtOqhyvO9bXBh/8X9b3Qz6+dPtZ9nN+vwJV4/eFAMn1OzAbs0OKsAxENewzw7vk3col28f/y1wfjPzquyHv/zf/gNe/JMHmufoIAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Send Notification"&gt;0d8dd9f10f11101051218e8ebc767e27&lt;/action_type&gt;&lt;action_type_parent display_value="Send Notification"&gt;7eda5d710f11101051218e8ebc767ec1&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;0d8dd9f10f11101051218e8ebc767e27&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;4&lt;/order&gt;&lt;parent_ui_id&gt;d87dc38a-c86d-4c1f-a039-4ab59122fe91&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;7128f147c30b1210c07d190ed4013120&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;2f42358f-12d2-41d9-b965-43ea54998370&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/9WW207cMBCGXwXlerOKk+wmy10FQkKiVALamwpFE3u8a8k51HG20BXv3nGSPcGWAi2Veunx6Z9/5ovzdeUp4R17sUiFmEkWSMZYwIIJC1mKKeY8mSYYpt7IK6FAWmmQV0bQeAm6dYHV6sQgWBQZG/PWGCztwwPNC9XUGu6/DMsowhdKC5r3jr/ejrwaDJ1o0XjHq0dTL5WkIUdNS6/Wmh5rtPe1G4uKtwXpytQ6eDHsPB1mjs5PaYY2OTls5OGdxVIg6ZCgGxx5BZQCbGXuNxFKWnwq9TawUKXtEy3grlE/6OYodOskUmZ8MGEzzAaD+rA8BQvX1rTctmbjV6U4Nr0nAiW02p7sxvoFn2qrqrLfYiHX692VbovysnfE2xywU4+2IRFYu0SdcrqcspDXi+r71VrkmSo7S4YUdcVBb0ZgrVF5a52cldeqm0Nu9+HDfqPGbmEBda3KeVabaqm6+0h9MZ5rGoylrr6TzEbNyzFwl+qYKgHjM4qfduEvYJTL+yMdQ5vdnZ9L9a3Fc9dHggVJNAu4n4STyI8DDn6eityHPJSTOJ6m05x5DyOvuW9ONDTN1jEqVfatdQn3/g1OZZ3ZndNZ13BuMzeqth9I3hIHfx5GA1spe66Ro3Dbtztnbvm6y9hkFk2TIDMATda08zk2XcWfMHa9O/c62l4gck3bTddjh0UPwD2JXezuPbrsJwbcwlfi1vfpAdrS4D+ibUjrz3Hb83qftj23/wlsPM9zmePMZznnfpxg6qchJD5OAh7JMAqCRL4Btt8hFj/fvTvPV1lZJRWHAZI1ZDwJUc7YNI3iiPYGwNM0YvlUIoCIIH6OtSODzksUr3/ifi97Dd3lvu7D2Qz0bRnYh+9qJz6wFz3PXo/aW146KjAuXf2wAKWzvpd+AeSj3P4ynL9SskcsSInc/cNIhVpQ02Xdnnd5NuU1guGLM3eTq2GP5z7de4UlxumOJ3TvlvP94L552lMN2mywJXMHZLIyBbiO6DJ8/E2IZwyTKEz92TSkbwJGEz8XUeQz+kYgAspQvM8DfPsT/bw0W94KAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;15&lt;/order&gt;&lt;parent_ui_id&gt;99b04fa9-a601-45eb-9e31-8d5a2639768b&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:57&lt;/sys_created_on&gt;&lt;sys_id&gt;8228f147c30b1210c07d190ed4013125&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:57&lt;/sys_updated_on&gt;&lt;ui_id&gt;de64e908-9d2f-4ac4-97eb-6c4c9630f4ed&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VWXW/aMBT9KyhPVGJRApS27Gkqq7Spa6Uy9aV0lolvwJtjZ7ZDyxD/fdexoRl0XSv1pRov4PuVc07OTbhZRZxFw6gPLElP0kHWS3u9bpJ0j/vpdNCbpl3WowBp1IkkLQArNWRKMzwvqKhcYLU61UAtMJLGWaU1SLteY55xUwq6vA5lGMnmXDDMR8Ob205UUo0TLehouNpJPReSoFMQWHq1wbSL0S5Ld2YqqwrERfgmeB46RyHT+jTCDDY5OGnSieDegmSAQHIqDHSigkpGrdLLaGh1hQEkzS6lWG4r5lxaT7Sg94b/wiv3E1eXAzLLggjbIwkC+XA+opaOcXJmK73VS/EMjNeEQU4rYU+bMV9wWVqupG+xdCo23UpUhbzwikTbAY37URkEAaXj6ZB7Wvl4ru6uNiDPuKwlCRSFyqjYnqi1mk8r6+CsIhBQa1zQsuRyRkqtFrxuRihFPBN4iHOh7vCahs9kTDOHO0ZVaXyG8VEdvqaaOxJfcAw2rzuRWZpTQY15oIIakp+VQ+KJBQqkVqGWgNROcM2Z5qX9gJdaQAC+7gTTTw+fclh28mCoxswH49+T9PCkNzhKiKbUEFPNZmDqW7Fn/nEz97I1eAbIzRp8rW/+46DDJuzFzpu9rQufCHtw+Gp7cPyW9iDQePOL8C/7J90nH7ANJ9WONw3rG4sP/EmVJD3W/6bBMQSCRjBK+mjO3vlLA9vfhhd2v2xfnsFqsy9nHAQzj9DcLAsUCNsC8bR3FiYkW9chuX15vNrWpIOk/ryh3fkP3iGeoo85zH8a2EWeqkeT6ZZvoSL0tLzrWzkjNRGS9gkRSv0gVUn8f5k4fKEKTiATz8B+VpWWVHyUVi/b6cH7ifzL3J1wjIoX7YMYncNt29V0jyYT6X8c7E2JzZznto0Jl0Jnyb2B3xWXe4NQVUMXwLZmWa/Xt78BH/l5B3AKAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Ask For Approval"&gt;f8f2e9920b10030085c083eb37673abd&lt;/action_type&gt;&lt;action_type_parent display_value="Ask For Approval"&gt;bae0a1120b10030085c083eb37673a92&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f8f2e9920b10030085c083eb37673abd&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;7&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;8a28f147c30b1210c07d190ed4013121&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;1cbf5cb9-2ea7-4a9c-9069-27112a9711af&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+1XW2/aMBj9K8jPiCWE+1tV1GnT1kql6kupIuM44Mokme20ZRH/fV9s51JoKWy8sPbR38U53+EcG99liAVohPqDsE2Hw7Yzcx3Hc5xBlzgDj868fq/vYeKgJorwkkKloCQWAawfMU/zQJadC4oVDXy3RVIhaKTWa8gHTCYcr25tGUTIgvEA8mh0d99ECRawo6ICjbKN1L6QOJ5RDqXXBaZNjGqV5OsgJukScPmsCP6wnWObaXwbQwaacjhOE9FnRaOAAo4Qc0mbaImjAKtYrNBIiRQCMHNwFfFVWbFgkTJzLvGzZL/hw147rwspDEYsB+XSt/yYcDjGCk9gZ6JSUdIVM0KloSSgIU65Oq/HTMFVolgcmRaFZ7zojnm6jC4NIajcoPZzpBJA0CSfM0duxgoni/jpugB5wSLNiB2RxwTzcoWVEmyWqhxOhiinmuIlThIWzf1ExI9MNwOUZWvOYdEKefwE35RsHrUwyXG3gFXcuoD4WIdvsWD5ED9hG2heN5FcyXOOpaxGAQ79X2mOxAxmR/A1C4aCvI8Ilqgz+MojtZjXTSv3GdmpLVJJyWxXqf3Zd7tDr9d3fIGx9GU6n1Opf4AtxU/qucO0vwe+Qvs3FuAGXqt8vfR17qXwdVvj0iSs7t3dureRSvhGMa/ofuCckO7tWCcv/Pc077i7NBUMKg0BApgBcz9klNeP+iKxrfVa5jCl74GqUPqZ/UbjwsJ6C67Vvl6+pn3dv6H99oHaf/vQHzjOKcn/Ix37ZKfYqFdp6iFORbTDAf6CSa2MN51QqzjMEXuALBzx3aDcNMQm+L/xg/fph//fD53uTqnV/laUqiZxFLAcsay5wpzMVF7TB0qUPItWX++yTCqsGGkNhsO+18U94vWx23Ydb+AE3bDv0Y7jem7PW6/vt110hB0Pc90eVJSvjZRT+R411nNlUtimuu/KC63Y0Xqvc6z3x4lZ76P8EyM7tRYOK20FKRAEb+v6c3uKDOwpGk1RFEd0ippTlFf5ubh0GCoAXJnQsSxbr00kFdhu4NaWVXeAV1JXSrKgAWhTR19EfG0GGz/Ga38PTgr/jVPaGBtStmmyvitxGl7Y1p03sQV6py83rH73dY9293U+7fev9gOYzC+fF3Cxwel3RE/e/wGIADtrAhMAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Look Up Record"&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/action_type&gt;&lt;action_type_parent display_value="Look Up Record"&gt;b93f42810b30030085c083eb37673a63&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;14&lt;/order&gt;&lt;parent_ui_id&gt;99b04fa9-a601-45eb-9e31-8d5a2639768b&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;8a28f147c30b1210c07d190ed4013124&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;dc5d64d0-1504-4e16-b466-836481c502e3&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VYTW/bOBD9K4LOjlfyt3MrEhgo0G2AJttLt0tQJBVzlyZVkkqaGP7vHYqUbdiKbaEOkGBv5nBIvpl5b0j52zLmNL6M6TSZ5tPpcDJOkn4/SUajPsFplvVHJEsyPIg7scQLBp4WZ4LB8AGL0o3Nk8FFoRWMkf/BNExTbgqBn74Grw/BBWbInAuqmYwvv33vxAXWsK+FNZfLnalTgQmcMQGudwHZDlD7VKyHqJrztk/by6LPfkJp6qAknZj9tExSBhhyLAzrxAssKbZKP60tmmF6I8XGMOfSwo6xc/5p+DOcO0mcX84gKsL83HqIQpK8Ob/GFt9aXRJb6uBK5ooTZnw+KMtxKezVts073BSWK+mX+LD9aiXKhfzs0xGvN6hrApbSAAhWuEAd8hBGfjtXj19qlDMuq5yESaEIlLEeYWs1z0rr8CxjJtgCNkILIAKX98jVnFeLAcuiey9g0M2FeoRDDb+XXUwc8C7kFXdnYL+uzF+x5i6KP2Gbikw5F8AQ5EtoVKmrVD4gIkpTTWgsjd8rXnUcJa8ENmYTOaQc/Sgdbp+HEDHySXNLiOaF/QBbPLAQ3KpTa2N4kILTDeWIkpQ7FKZZIH+XsANdLq+AOZZRlHZJqSHJdrX6x1gweQfN/mUE5vdl9Ft7tRTe8ahr4V1th92UiiDBPdunpg2CBNOzSXCQJO9JhHD429Nge1X5FByRVkoPkoxu+GSUtsjncktb+wppzfMTINQ8v3HMjLKnl1AFmuecCdp008zcxM5N0/t/3jRvkuQAiCJfPS4Fl9WzAYC+FvuHB6mXpTs8q+i1da84GzZkXwM4sip6bq2EE+DUSriFs6M7j6cBYt3vK8rs9vraGATQP5sA+r3zCGC5DnOdyIac1y9FV83a/9n5411/oODWgnTVJLBWZ6Ztz+yt9gXcb6XgbbL5mesXOHfmJ+ULiuy8ZguYw9JwHvL6RY+c3jO7Ob32oso+YvFf03xgHKoLVYX3Cs/T9OAXUrb1POU5WkDleAGvaM0IkMMgrBnKVSkpCu/nDZFcJXOujQ3O+43mCwP9yEiBMCM7Z1HlHa29W17Ex+OoU/kxj+pAwmkmgkCiKpBoHUi7sNs0rcEZH6fnblozzEVVDfg0KrbKybRW+oXGdaSQBxhxYlc7EVR6VlC/3/aaJNDY/o5gfRff2edvTYThbNDDo3E/TZMkTeg4mYzH6WSU5SM8HuQbjSJkJIFuCjvnQBXYHtXUqOuc7Pcf31LbNpoTUNUUvFbSfUb3xjZysKC+UQ3rOPDQUDKlBMNyp6PcwT3xxyzgD3wdvrmu8i7+dSr53W6mvakx16/1bij5X5L/KNlHR7EJS3qTlJKLyTgdXwxyOrqYUjy8wNNsOO5TRgb5OZ8C338BGKjjIscVAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;d87dc38a-c86d-4c1f-a039-4ab59122fe91&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;b128f147c30b1210c07d190ed401311f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;c9c70bf4-78a8-4e3e-a8f3-f11f425e431b&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VVXU/bMBT9K5GfoyppSgd9m6iQJvEhwcQLg+jWvk2tOXZmO9Cu6n/fTeKUCBADiT2g5c33+trnnJyT3GyZFGzGJiiS9Cid8izNsnGSjA8n6WKaLdKxyAAxZTHTUCLttMiNFbS+B1U3he322CJ4FHk64rW1qP1uR30hXaVgcx22UYWvpBLUZ7Ob25hVYOlEj5bNtk9ab4WkYIGKtl72mJ5i9JuqWQvD65Jw5bIvnobJeehE3+bUoaEGTprEDNcetUACsgTlMGYlaAHe2A2beVtTgUiLC602+x0rqX1HtIS1k7/p5knS7FsiMeNBhP0yDwJ15eUcPFzRydzXdq+XkRxdp4nAJdTKHw9r3YaLykujuxEPC9VPG1WX+rxThO0PGLyP2hEIrBqeDfKO1vJqZR4ue5AnUreSBIrKcFD7FXhv5aL2DZwtQ4WtxiVUldRFXllzL9thglKOCkWL0VKZB7rTyUKPgDe4R6QqjE6oPm/L12BlQ+KMjqHhXczcxh0rcO6RCmmY/6obJB2xQCFvVWglyFsnNMPcysp/pavuMQDfxcH0i4PXHMaPHg01OPPR+Os8PTjKpl+S3AK43NVFga59Fc/MfzXsvS8GbwDZx+B7+/JfBh2S8Kx2OpyNzrtGyMHBh+Xg8DPlIND49EH4m/2T8asf2IGTWse7gfWdpw/+jzpJMjG5s9gwxJyM4IzuqmcoJESgGnNsIlxL510kdeRXGHHiqUwRR5WiCYyUMT8jKEC+EJx/d9H7UvgGrfoUnkhUwr0gXh9BLImhx7wT80kMQzO6Ds39L+nDsphOk/b5RIn8b/5Mt38Aj0LacJAJAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2de05916c31332002841b63b12d3aee1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;9&lt;/order&gt;&lt;parent_ui_id&gt;b7cf0d86-f4dc-462c-b648-c18637f95b96&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;c628f147c30b1210c07d190ed4013122&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;fb17a146-aa14-4f01-86cb-9c6f28ffe9c4&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/9VVy27iMBT9lcrrECWEpsBuRMVq2krTEZtOG93YN2DJeYztUBiUf5/rPCjqFM1Ds4Gd78vnHF9Ong5MCjZncYjB9SyMeRRG0TgIxtNJmMZRGo5FBIgT5rECcqRKC6nCpD14bAuqdsFdEl7PovgmSDSASXIUEigtpKkU7Fd91V0f5huphMaCzZ+ePVaBpmEWNZsf3qX+FJqCFBWVfnXYzkC1++rD2OfT3qv7LlFq4fAEHsOdxUIgAclAGfRYDoUAW+o9m1tdU0AjiIdC7Y8VG1lYGshc7c7IH3TtNHB1GRIzjl3ueEx6lbpwdgsWHmkyt7XuS/mmlBxNp4nADGplF6exruChsrIsupaWZt9dqjov7jtJ2HHA8CgUqQ2BwMrxdMh7Gtnjpnz9MqBcyqKVpE+qkoM6nsBaLdPaOjwHhgpzGpTkUFWyWCeVLreybSYsub9WdPAzVb7SpUauCx+4A+6TrOAvKX7bhlegpWNxR2OoufGY2ZuFAmPeuJCIyffaIemY9RySTgbXwrWs7Ce6YIs93MYbdl5gMDu7WGH6tkjtmpuTfbfSKvxWB0EkDocFbYBFkYQ+rzWJZf023TQvbr+GKhFF8WQc4ojum44mUcRH05sYRxDylE8ikWGa+ho5rZ7v+qhdk5JAb7NH0P8y5rS/aX79P14oi7+0j9+/8mAfS4lKmA+effAOzEk+i0m3Bu/8o09erfpk7yHh//KQMA7a3wU5SUfu4o3k5JtxxlKefwIxppL3SAcAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Send Notification"&gt;0d8dd9f10f11101051218e8ebc767e27&lt;/action_type&gt;&lt;action_type_parent display_value="Send Notification"&gt;7eda5d710f11101051218e8ebc767ec1&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;0d8dd9f10f11101051218e8ebc767e27&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;16&lt;/order&gt;&lt;parent_ui_id&gt;99b04fa9-a601-45eb-9e31-8d5a2639768b&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:57&lt;/sys_created_on&gt;&lt;sys_id&gt;ca28f147c30b1210c07d190ed4013125&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:57&lt;/sys_updated_on&gt;&lt;ui_id&gt;1d6c5a67-4aa7-4758-ac5e-3e927ff84abf&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/9WW207cMBCGXwXlerOKk+wmy10FQkKiVALamwpFE3u8a8k51HG20BXv3nGSPcGWAi2Veunx6Z9/5ovzdeUp4R17sUiFmEkWSMZYwIIJC1mKKeY8mSYYpt7IK6FAWmmQV0bQeAm6dYHV6sQgWBQZG/PWGCztwwPNC9XUGu6/DMsowhdKC5r3jr/ejrwaDJ1o0XjHq0dTL5WkIUdNS6/Wmh5rtPe1G4uKtwXpytQ6eDHsPB1mjs5PaYY2OTls5OGdxVIg6ZCgGxx5BZQCbGXuNxFKWnwq9TawUKXtEy3grlE/6OYodOskUmZ8MGEzzAaD+rA8BQvX1rTctmbjV6U4Nr0nAiW02p7sxvoFn2qrqrLfYiHX692VbovysnfE2xywU4+2IRFYu0SdcrqcspDXi+r71VrkmSo7S4YUdcVBb0ZgrVF5a52cldeqm0Nu9+HDfqPGbmEBda3KeVabaqm6+0h9MZ5rGoylrr6TzEbNyzFwl+qYKgHjM4qfduEvYJTL+yMdQ5vdnZ9L9a3Fc9dHggVJNAu4n4STyI8DDn6eityHPJSTOJ6m05x5DyOvuW9ONDTN1jEqVfatdQn3/g1OZZ3ZndNZ13BuMzeqth9I3hIHfx5GA1spe66Ro3Dbtztnbvm6y9hkFk2TIDMATda08zk2XcWfMHa9O/c62l4gck3bTddjh0UPwD2JXezuPbrsJwbcwlfi1vfpAdrS4D+ibUjrz3Hb83qftj23/wlsPM9zmePMZznnfpxg6qchJD5OAh7JMAqCRL4Btt8hFj/fvTvPV1lZJRWHAZI1ZDwJUc7YNI3iiPYGwNM0YvlUIoCIIH6OtSODzksUr3/ifi97Dd3lvu7D2Qz0bRnYh+9qJz6wFz3PXo/aW146KjAuXf2wAKWzvpd+AeSj3P4ynL9SskcsSInc/cNIhVpQ02Xdnnd5NuU1guGLM3eTq2GP5z7de4UlxumOJ3TvlvP94L552lMN2mywJXMHZLIyBbiO6DJ8/E2IZwyTKEz92TSkbwJGEz8XUeQz+kYgAspQvM8DfPsT/bw0W94KAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;10&lt;/order&gt;&lt;parent_ui_id&gt;b7cf0d86-f4dc-462c-b648-c18637f95b96&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;ce28f147c30b1210c07d190ed4013122&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;2c3acba9-996e-48ca-8077-0ab2bf2359ff&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VVy27iMBT9FeQ1ihICTGFXgZBG6rRSGbHpVJFj34Al5zF+UBjEv89N4oQIqg6VukGTne/DPuf4XOflQAQnUzIE7geTYMzCIAwHvj+4GwbxOIyDAQ8pQED6JKMpYKUCliuO6y2VtgwcDjMF1ACPAo9ZpSAzxyPmudCFpPuVK8MI2wjJMU+mL699UlCFOxpQZHo4S10LSdIYJJY+N5jOMZp9Ua55zmyKuCLRBB9c59xlet/nmMGmEk7g9wnsDGQcEEhCpYY+SWnGqcnVnkyNshhA0vwpk/u2YiMyUxNN6U6LP3jy0C/rEkBmzInQLiMnUB1O5tTQJe7MjFWtXrlgoGtNOCTUSjPrxuqCp8KIPKtbDI1l051Lm2aPtSKk3aBzH1YjCChKniXymlay3ORvzw3IhcgqSRxFmTMq2xU1RonYmhLOgYCESuOUFoXI1lGh8q2omhFK6q0lLrxE5m94phbrzKOsxO2hqtRbYHxehVdUiZLED9wGm499ovd6JqnWJyqoYfTblkhqYo5CVKlQSRBVTiibmRKFucejtuCAH/vO9PHoI4exyclQnT1Pxt9FwWgSjr/5kaJUR9qu16Crq7gw/7Kb+9wYXAGyGYOf1eW/D9pNwkXsodvbe6wTbg5GXzYHd7c0B47GzQ/Cv+zvDz58YDtOqhyvO9bXBh/8X9b3Qx5euv0s+zm/X4Gq8ftCgOT6HZiN2SFFWAaiGvaZ4V2yt3LJ9vH/MtcHY7/6bsj7/80/4PUvSF/rMfoIAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Look Up Records"&gt;43400a1587003300663ca1bb36cb0b4b&lt;/action_type&gt;&lt;action_type_parent display_value="Look Up Records"&gt;d1c56ec50b30030085c083eb37673a50&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;43400a1587003300663ca1bb36cb0b4b&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;f528f147c30b1210c07d190ed401311d&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;dcd97419-ac1b-4587-8e03-584b949d7897&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VX226jMBD9lYjnCEFJ0svbKlWllXqR2qov3V1rwCax1gHWNknTiH/fARuCEtJNpERqtY+ei31m5hxjXlcOp86VcxEPPA/84cW55wWB541GQQR+GAajKPTCQej0nQRmDCM1hILhcg4iL9dvxB9eBqNzj0gARWaMckA35SoTsHyxUXfWHE25oJIlztXrz76TgcRNNZPO1WrDtS8qASETGPpsYW2g1MusWZLKZ2y37bTevXGkkpZQvL7D3jRLKEMMMQjF+s4MEgo6lcvGIhnQh0SsDVOeaNzRKYPfFH/Hcy+8Mi5mWFXEjK9ZEtshY46vQcOTlnmkc2lDo2nKI6ZMPyiLIRd63LaZgIdM8zQxKaZsk52KfJbcm3Y4zQb1QNCSKwTBsrLQErktI36apovHGuUNT6qeWKdIIxDNCrSWPMx1iWflMMFmuBGZQZbxZEIymc55lYxYZu5E4MKNRbrAQxWfJC5EJXAX+wruDdqvK/MLSF5WcYfbYDIC4gIZQswIVZrLqpVzEolcVQ4JiTJ7OUXfUUs1FqDUunJsOfmTl7hNH2zFxDStTIkkz/Q33GLObHFFfy9hDL015aI0obxEoVrq0FwL9iPHXLpajZEzmlHiu1Eusb3ardxF8Uti8wDHsWQgd0e3o4piW2SnPeyY0q36Vkt33G5cVzOtiLdst10bWBH7RxMx1vGVZIyHfz4VH65L04J/iDM6/5BkwzWfVCo1Mb1sqXNbQgfzfA8INc8fSmb2wuUuVJbmMWeCdn2rbkrHxrfq7P/8Vn1KkiMgSsz0eCJ4Ul3JCPRU7Pc+vmIvN3hW0WvN/coGKtrWAPR02ns/WAl7wKmV8IRn954Nng6I9X1fUWbzrq+NVgDB0QQQnB1HAKumzKaRHT2v35rlNOv49zIeNuORgq0Ev+gS2EFn+oeeeVZsCzg4SMFtshnP9Q7OHflRukOR/VNeAVNMtecRo1+y4HTC9Pr0OoqmegHid5ffMo7Ug6rKO8EDd/ChbEf+WqKoFCKZwuG1X7g+Po+27xDfNebDrpA9sNTtuIO33mMDphOhvUZQ6WxSzaZ9j3xvrJbkgyM+GD/tl7QeVqcG65l9if/C4wnh5183gcrbBBEAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=3528b147c30b1210c07d190ed40131bd^sys_idNOT IN3528f147c30b1210c07d190ed4013119,7528f147c30b1210c07d190ed401311b,7928f147c30b1210c07d190ed401311c,b528f147c30b1210c07d190ed4013118,b928f147c30b1210c07d190ed4013116,f528f147c30b1210c07d190ed401311a"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;3d28f147c30b1210c07d190ed4013118&lt;/block&gt;&lt;comment&gt;sugestão aprovada&lt;/comment&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;8&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;3528f147c30b1210c07d190ed4013119&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;b7cf0d86-f4dc-462c-b648-c18637f95b96&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvFHnM55KymFQbfCWvqyFXMty42YLHmSnDQz+e+7shwnrBlbWR/3Yqwj3atzju/BPVGdbTtr7tWlMfxJkuWXx4Bw6TB874mEhpEloUpW3HIliwEIyAZE5zbwteKmFbB7OCJ0zUWl2ditBY01lmmy7H/Z4hUW1BHUcU5jmiaLNImi5P08LhdpGSdVCgxSbCigZAKPrg403t0MSPBbfnbXOtxYzeXTuL4Zu9wdQKUrxyqOAsKeLZMVQz41CMMC0oCswCq9mxDNoLqV4gisubRecAPPhv/AC5MscwdrhhLp6Ma0LEanPFxfgQWk0lHb6ck4xSkz3pyK1dAJuzrF/IHb1kn1JRZKcahWomvkJ+8ImRqcfJjOIAnWOqWO+qijvlur7ecDy2suB1fGTaEoiGkFFr0rO+v49IQJ1mCjooG2RUeLVqsNH4qRSxM+CVyEtVBbvNRNVwjUEQ/RWAivEb8a4AfQ3Kn4iG2w2NMswXBaDJOI7dAmRvYBMTuzEmDMUSS6W3zvHEUveRRXeH9cCdW8tZd484aNOvbBy8E+mem+j2lZZ7TMZwmDi9kccjrLowUuL+I4gRyfUIfIFvWCKIwFy/b7r10UpZVHcZBeBOOt2r4uXTlkdRZH2fl0zRfn0nUmV6+MVPKHSLnv+ZeJiqLof6T+OVLcFD4Io7bh8jdM1KOLj79z8ppyg9TuHfbh8EdxGzscLk5Poa3S35yoI7b/CbUPioubBgAA&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;7d28f147c30b1210c07d190ed401311a&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;b7cf0d86-f4dc-462c-b648-c18637f95b96&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else If"&gt;666e5545c3e232002841b63b12d3ae99&lt;/logic_definition&gt;&lt;order&gt;13&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;7528f147c30b1210c07d190ed401311b&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;99b04fa9-a601-45eb-9e31-8d5a2639768b&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+1VXW/TMBT9K8jPaZSka0f7NnWahDSYxKa9wBTdOE5rcOzgj3Yl6n/nOk7Sig0Boo+8RPGx7/U5J/coLVHONs6aB3VlDF9Lsvz0FBEuPYbvLZFQM7IkVMmSW65k3gER2YJwfgNfS24aAfvHI0I3XJSa9d0a0FhjmSbL9qctXmJBlUCVLmhKp9l8miVJ9vYiLebTIs3KKTDIsKGAggk8uhpovLntkOiX/Oy+8bixmst1v77tu9wPoNKlZ5UmEWHPlsmSIZ8KhGERqUGWYJXej4hmUN5JcQQ2XNoguIZnw7/jhdls5g9WDCXS3o1xmfdOBbi6BgtIxVHr9Gic4pSZYE7JKnDCrk6xcOCu8VJDiYVCDNVKuFp+CI6QscHJh3EGSbDGK/XUex3V/UbtPg4sb7jsXOk3haIgxhVY9K5w1vNpCROsxkZ5DU2DjuaNVlveFSOXOl4LXMSVUDu81E9XDNQTj9FYiG8Qv+7gR9Dcq3iPbbA40CzAcJp3k4jt0CZGDhExe7MSYMxRJLqbf3OeYpDci8uDP76Eat7YK7x5y3odh+jlYJ/MdNumtKhmtFhMMgaXkwtY0MkimePyMk0zWOATqhjZol4QubFg2eHw2SXJFGf7C6MWB+lFMM7V9qzpSl9L1yu5+stIZb+JlP+ef5ioJEn+R+qfI8VNHoLQa+suP2Oinnx8wp2j15QbpPbgsXfDH8Vv7HG4OD2Fdkp/9aKO2OEHtFaBTZsGAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;7128f147c30b1210c07d190ed401311c&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="End"&gt;d176605ea76103004f27b0d2187901c7&lt;/logic_definition&gt;&lt;order&gt;17&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;99b04fa9-a601-45eb-9e31-8d5a2639768b&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;7928f147c30b1210c07d190ed401311c&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;35beb915-d9a0-414d-8b3b-c4aaf2e2fba5&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;bd28f147c30b1210c07d190ed4013117&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="End"&gt;d176605ea76103004f27b0d2187901c7&lt;/logic_definition&gt;&lt;order&gt;5&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;d87dc38a-c86d-4c1f-a039-4ab59122fe91&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;b528f147c30b1210c07d190ed4013118&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;7e121018-168b-408f-9136-35446741b2d4&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;3d28f147c30b1210c07d190ed4013115&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="For Each"&gt;098e1dc5c3e232002841b63b12d3ae33&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;b928f147c30b1210c07d190ed4013116&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;d87dc38a-c86d-4c1f-a039-4ab59122fe91&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/51TwW6jMBD9F58TBIEmIbeqVaVKu1sprXpZVdFgD4m1xmZtk5RF+fcdx4RWPfYE8zzz5r2HGZjpfNt592JunZN7zTa/32ZM6oDR+8A0NMg2THpsHJuxI6gu1MMguChXRVbOgWfVvLhZr+ZrTPP5zbqoyqIUq3W5SrbIjRXufKZRIV2roH/9PgM/SCUsjiJbsKTNo2Wb4cuRFLQgK0VdZmnJ88UyX6TpYl1k1TKvsoXIAcWSCBVUqKj1cXT3xazv21DaKGEEfowz2wmlRxCxSGcM3z1qgbS+BuVwxhrQAryxPdt42xFgEcSTVv3UcZDaEx0Lve9O/qONWZqGxhrJEMd4OJW7MccI1/fg4Zmoue/s2MoPRnJ0MQqBNXTK333GYsNT66XRccRDpa7TRnWN/hWTYBPB9bMR0jkSgW0wGqSPPurngzltryofpL6EMh4qw0FNFXhvZdX5oGdgqLAhol0DbSv1ftdac5SXYdLSJHtFRVIrc6Kl4YomwIPwhHKF5IHw+wv8ClYGFz+JhobPM+Z6d6fAuQ8vFOLubxeURGejh12MIYxwK1t/SwuOOMo9v4VbH7mnTLl0JOElYI/XfyUc9HSDJP8MnYz9E8R/YOf/E6RcHXUDAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;fd28f147c30b1210c07d190ed4013119&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Suggestion lifecycle"&gt;3528b147c30b1210c07d190ed40131bd&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="End"&gt;d176605ea76103004f27b0d2187901c7&lt;/logic_definition&gt;&lt;order&gt;12&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;b7cf0d86-f4dc-462c-b648-c18637f95b96&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;f528f147c30b1210c07d190ed401311a&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;ui_id&gt;2af1b2d1-c038-4533-abe4-ce85c8cd73c6&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd^sys_idNOT INf528b147c30b1210c07d190ed40131db,fd28b147c30b1210c07d190ed40131de"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;f528b147c30b1210c07d190ed40131db&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-16 20:13:56&lt;/sys_created_on&gt;&lt;sys_id&gt;fd28b147c30b1210c07d190ed40131de&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RaaS - Camilla Aoki"&gt;75ed81bec3f21210c07d190ed401319a&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 20:13:56&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=3528b147c30b1210c07d190ed40131bd"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=3528b147c30b1210c07d190ed40131bd"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-981657744</payload_hash>
+        <record_name>Copy of Suggestion lifecycle</record_name>
+        <reverted_from/>
+        <source>d29e03bac37e1210c07d190ed40131ce</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:13:57</sys_created_on>
+        <sys_id>8a28f147c30b1210c07d190ed4013144</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19470c0491f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:13:57</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>8e28f1475c0b12104ee343bf08036043</update_guid>
+        <update_guid_history>8e28f1475c0b12104ee343bf08036043:-981657744,3128b147cc0b12102428b98e0d8afec4:-720451254</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 20:58:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>7aa7104262e645198e82daa3383259b1</sys_id>
+        <sys_metadata>3528b147c30b1210c07d190ed40131bd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Suggestion lifecycle</sys_name>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_scope_delete display_value="">3c9b869725a94870a23fdfd2e4524fb1</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_3528b147c30b1210c07d190ed40131bd</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_3528b147c30b1210c07d190ed40131bd">8a28f147c30b1210c07d190ed4013144</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:58:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
