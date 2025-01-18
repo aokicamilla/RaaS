@@ -38,8 +38,7 @@
         <message/>
         <message_html><![CDATA[<p>Hello ${opened_by.first_name}!</p>
 <p>Thank you for your suggestion, the ${type} ${title} was integrated in our system.</p>
-<p>&nbsp;</p>
-<p>Please <a href="https://dev250676.service-now.com/sp?id=sc_cat_item&amp;sys_id=2684fdffc3fa1210c07d190ed40131b0&amp;sysparm_category=7c92f57fc3fa1210c07d190ed4013130">submit your review now!</a></p>
+<p>Now feel free to write your review.</p>
 <p>Thank you!</p>]]></message_html>
         <message_list/>
         <message_text/>
@@ -62,7 +61,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c02e715683431210ac8831b6feaad340</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Suggestion Approved</sys_name>
         <sys_overrides/>
         <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
@@ -70,7 +69,7 @@
         <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
         <sys_update_name>sysevent_email_action_c02e715683431210ac8831b6feaad340</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-14 16:42:57</sys_updated_on>
+        <sys_updated_on>2025-01-18 00:16:19</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

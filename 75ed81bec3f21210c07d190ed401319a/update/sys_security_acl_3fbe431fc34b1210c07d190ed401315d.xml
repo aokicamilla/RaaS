@@ -5,25 +5,25 @@
         <advanced>false</advanced>
         <applies_to/>
         <condition/>
-        <decision_type>deny</decision_type>
+        <decision_type>allow</decision_type>
         <description/>
         <local_or_existing>Local</local_or_existing>
-        <name>x_1593670_raas_m2m_actor_media</name>
-        <operation display_value="list_edit">54f535270a0a0b8c007c67009ab2bdc0</operation>
+        <name>metric_instance</name>
+        <operation display_value="report_view">0997ab83733303005978e4b9cdf6a7b9</operation>
         <script/>
         <security_attribute/>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-14 18:20:26</sys_created_on>
-        <sys_id>33fa0b9e83c71210ac8831b6feaad370</sys_id>
+        <sys_created_on>2025-01-17 21:11:30</sys_created_on>
+        <sys_id>3fbe431fc34b1210c07d190ed401315d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_1593670_raas_m2m_actor_media</sys_name>
+        <sys_name>metric_instance</sys_name>
         <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
         <sys_policy/>
         <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
-        <sys_update_name>sys_security_acl_33fa0b9e83c71210ac8831b6feaad370</sys_update_name>
+        <sys_update_name>sys_security_acl_3fbe431fc34b1210c07d190ed401315d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-14 18:20:26</sys_updated_on>
+        <sys_updated_on>2025-01-17 21:11:30</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

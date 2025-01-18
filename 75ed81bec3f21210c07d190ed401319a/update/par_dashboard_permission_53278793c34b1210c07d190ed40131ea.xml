@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="INSERT_OR_UPDATE">
+        <can_read>true</can_read>
+        <can_share>false</can_share>
+        <can_write>false</can_write>
+        <dashboard display_value="Dashboard RaaS">c3046653c3871210c07d190ed4013149</dashboard>
+        <group/>
+        <owner>false</owner>
+        <role/>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 20:37:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>53278793c34b1210c07d190ed40131ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c3046653c3871210c07d190ed4013149</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RaaS - Camilla Aoki" source="x_1593670_raas">75ed81bec3f21210c07d190ed401319a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RaaS - Camilla Aoki">75ed81bec3f21210c07d190ed401319a</sys_scope>
+        <sys_update_name>par_dashboard_permission_53278793c34b1210c07d190ed40131ea</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 20:37:40</sys_updated_on>
+        <user display_value="RaaS Tester">6d76e162c33a1210380d5f73e40131a3</user>
+    </par_dashboard_permission>
+</record_update>
